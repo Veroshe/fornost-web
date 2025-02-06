@@ -1,92 +1,193 @@
-import * as React from 'react';
-import Box from '@mui/material/Box';
-import Card from '@mui/material/Card';
-import Container from '@mui/material/Container';
-import Grid from '@mui/material/Grid2';
-import Stack from '@mui/material/Stack';
-import Typography from '@mui/material/Typography';
-import AutoFixHighRoundedIcon from '@mui/icons-material/AutoFixHighRounded';
-import ConstructionRoundedIcon from '@mui/icons-material/ConstructionRounded';
-import QueryStatsRoundedIcon from '@mui/icons-material/QueryStatsRounded';
-import SettingsSuggestRoundedIcon from '@mui/icons-material/SettingsSuggestRounded';
-import SupportAgentRoundedIcon from '@mui/icons-material/SupportAgentRounded';
-import ThumbUpAltRoundedIcon from '@mui/icons-material/ThumbUpAltRounded';
+import * as React from "react";
+import Box from "@mui/material/Box";
+import Card from "@mui/material/Card";
+import Container from "@mui/material/Container";
+import Grid from "@mui/material/Grid2";
+import Stack from "@mui/material/Stack";
+import Typography from "@mui/material/Typography";
+import Link from "@mui/material/Link";
+import Button from "@mui/material/Button";
+import AutoFixHighRoundedIcon from "@mui/icons-material/AutoFixHighRounded";
+import ConstructionRoundedIcon from "@mui/icons-material/ConstructionRounded";
+import QueryStatsRoundedIcon from "@mui/icons-material/QueryStatsRounded";
+import SettingsSuggestRoundedIcon from "@mui/icons-material/SettingsSuggestRounded";
+import SupportAgentRoundedIcon from "@mui/icons-material/SupportAgentRounded";
+import ThumbUpAltRoundedIcon from "@mui/icons-material/ThumbUpAltRounded";
+import PinDropIcon from "@mui/icons-material/PinDrop";
+import LocalActivityIcon from "@mui/icons-material/LocalActivity";
+import BedtimeIcon from "@mui/icons-material/Bedtime";
+import RestaurantMenuIcon from "@mui/icons-material/RestaurantMenu";
+import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
+import TrainIcon from "@mui/icons-material/Train";
+import { styled, alpha } from "@mui/material/styles";
+
+const StyledBox = styled(Box)(({ theme }) => ({
+  borderRadius: `calc(${theme.shape.borderRadius}px + 8px)`,
+  backdropFilter: "blur(24px)",
+  border: "1px solid",
+  borderColor: (theme.vars || theme).palette.divider,
+  backgroundColor: theme.vars
+    ? `rgba(${theme.vars.palette.background.defaultChannel} / 0.4)`
+    : alpha(theme.palette.background.default, 0.4),
+  boxShadow: (theme.vars || theme).shadows[1]
+}));
 
 const items = [
   {
-    icon: <SettingsSuggestRoundedIcon />,
-    title: 'Adaptable performance',
+    icon: <BedtimeIcon />,
+    title: "Nocleg",
     description:
-      'Our product effortlessly adjusts to your needs, boosting efficiency and simplifying your tasks.',
+      "Na polu namiotowym, w cenie biletu. Do dyspozycji uczestników są przenośne toalety i prysznice oraz punkty z prądem. Niektórzy uczestnicy korzystają z noclegów w pobliskich agroturystykach."
   },
   {
-    icon: <ConstructionRoundedIcon />,
-    title: 'Built to last',
+    icon: <TrainIcon />,
+    title: "Dojazd",
     description:
-      'Experience unmatched durability that goes above and beyond with lasting investment.',
+      "Najbliższą miejscowością, do której dojeżdża pociąg oraz autobusy dalekobieżne jest Myszków. Z Myszkowa można dojechać busami do Żarek, skąd na miejsce imprezy jest około 6 kilometrów."
   },
   {
-    icon: <ThumbUpAltRoundedIcon />,
-    title: 'Great user experience',
-    description:
-      'Integrate our product into your routine with an intuitive and easy-to-use interface.',
+    icon: <RestaurantMenuIcon />,
+    title: "Wyżywienie",
+    description: "Informacje wkrótce"
   },
   {
-    icon: <AutoFixHighRoundedIcon />,
-    title: 'Innovative functionality',
-    description:
-      'Stay ahead with features that set new standards, addressing your evolving needs better than the rest.',
-  },
-  {
-    icon: <SupportAgentRoundedIcon />,
-    title: 'Reliable support',
-    description:
-      'Count on our responsive customer support, offering assistance that goes beyond the purchase.',
-  },
-  {
-    icon: <QueryStatsRoundedIcon />,
-    title: 'Precision in every detail',
-    description:
-      'Enjoy a meticulously crafted product where small touches make a significant impact on your overall experience.',
-  },
+    icon: <CalendarMonthIcon />,
+    title: "Program",
+    description: "Informacje wkrótce"
+    //type: "link"
+  }
 ];
 
 export default function Highlights() {
   return (
-    <Box
+    <StyledBox
       id="highlights"
       sx={{
         pt: { xs: 4, sm: 12 },
-        pb: { xs: 8, sm: 16 },
-        color: 'white',
-        bgcolor: 'grey.900',
+        pb: { xs: 8, sm: 16 }
       }}
     >
       <Container
         sx={{
-          position: 'relative',
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
-          gap: { xs: 3, sm: 6 },
+          position: "relative",
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          gap: { xs: 3, sm: 6 }
         }}
       >
         <Box
           sx={{
-            width: { sm: '100%', md: '60%' },
-            textAlign: { sm: 'left', md: 'center' },
+            width: { sm: "100%", md: "60%" },
+            textAlign: { sm: "left", md: "center" }
           }}
         >
           <Typography component="h2" variant="h4" gutterBottom>
-            Highlights
-          </Typography>
-          <Typography variant="body1" sx={{ color: 'grey.400' }}>
-            Explore why our product stands out: adaptability, durability,
-            user-friendly design, and innovation. Enjoy reliable customer support and
-            precision in every detail.
+            Najwaniejsze informacje
           </Typography>
         </Box>
         <Grid container spacing={2}>
+          <Grid size={{ xs: 12, sm: 6, md: 4 }}>
+            <Stack
+              direction="column"
+              component={Card}
+              spacing={1}
+              useFlexGap
+              sx={{
+                p: 3,
+                height: "100%",
+                borderColor: "hsla(220, 25%, 25%, 0.3)",
+                backgroundColor: "background.default"
+              }}
+            >
+              <Box sx={{ opacity: "50%" }}>
+                <PinDropIcon />
+              </Box>
+              <div>
+                <Typography
+                  gutterBottom
+                  sx={{ fontWeight: "bold" }}
+                  variant="h6"
+                >
+                  Gdzie
+                </Typography>
+
+                <Typography variant="body1" sx={{ color: "grey.900" }}>
+                  <b>26.07 - 03.08.2025</b> we wsi{" "}
+                  <Link href="https://maps.app.goo.gl/h2fYT5WwmHKT4QCg7">
+                    Czatachowa, woj. śląskie
+                  </Link>
+                  , położonej na Jurze Krakowsko-Częstochowskiej. Teren Fornostu
+                  (pole namiotowe), znajduje się na samym końcu jednej z dwóch
+                  dróg w miejscowości.
+                </Typography>
+              </div>
+            </Stack>
+          </Grid>
+          <Grid size={{ xs: 12, sm: 6, md: 4 }}>
+            <Stack
+              direction="column"
+              component={Card}
+              spacing={1}
+              useFlexGap
+              sx={{
+                p: 3,
+                height: "100%",
+                borderColor: "hsla(220, 25%, 25%, 0.3)",
+                backgroundColor: "background.default"
+              }}
+            >
+              <Box sx={{ opacity: "50%" }}>
+                <LocalActivityIcon />
+              </Box>
+              <div>
+                <Typography
+                  gutterBottom
+                  sx={{ fontWeight: "bold" }}
+                  variant="h6"
+                >
+                  Bilety
+                </Typography>
+
+                <Typography
+                  variant="body1"
+                  sx={{ color: "grey.900", fontWeight: "bold" }}
+                >
+                  Tura II (07.01.2025 - 25.07.2025)
+                </Typography>
+                <Typography variant="body1" sx={{ color: "grey.900" }}>
+                  bilet normalny: 550zł
+                </Typography>
+                <Typography variant="body1" sx={{ color: "grey.900" }}>
+                  bilet dla studenta/ucznia/doktoranta: 500zł
+                </Typography>
+                <Typography
+                  variant="body1"
+                  sx={{ color: "grey.900", fontWeight: "bold" }}
+                >
+                  Tura III (na konwencie)
+                </Typography>
+                <Typography variant="body1" sx={{ color: "grey.900" }}>
+                  bilet normalny: 700zł
+                </Typography>
+                <Typography variant="body1" sx={{ color: "grey.900" }}>
+                  bilet dla studenta/ucznia/doktoranta: 650zł
+                </Typography>
+
+                <Link href="https://forms.gle/QvSuBcXhJ8sQhdYq6">
+                  <Button
+                    variant="contained"
+                    color="primary"
+                    size="large"
+                    sx={{ minWidth: "fit-content", marginTop: 2 }}
+                  >
+                    Kup bilet
+                  </Button>
+                </Link>
+              </div>
+            </Stack>
+          </Grid>
+
           {items.map((item, index) => (
             <Grid size={{ xs: 12, sm: 6, md: 4 }} key={index}>
               <Stack
@@ -95,27 +196,37 @@ export default function Highlights() {
                 spacing={1}
                 useFlexGap
                 sx={{
-                  color: 'inherit',
                   p: 3,
-                  height: '100%',
-                  borderColor: 'hsla(220, 25%, 25%, 0.3)',
-                  backgroundColor: 'grey.800',
+                  height: "100%",
+                  borderColor: "hsla(220, 25%, 25%, 0.3)",
+                  backgroundColor: "background.default"
                 }}
               >
-                <Box sx={{ opacity: '50%' }}>{item.icon}</Box>
+                <Box sx={{ opacity: "50%" }}>{item.icon}</Box>
                 <div>
-                  <Typography gutterBottom sx={{ fontWeight: 'medium' }}>
+                  <Typography
+                    gutterBottom
+                    sx={{ fontWeight: "bold" }}
+                    variant="h6"
+                  >
                     {item.title}
                   </Typography>
-                  <Typography variant="body2" sx={{ color: 'grey.400' }}>
-                    {item.description}
-                  </Typography>
+
+                  {item.type === "link" ? (
+                    <Link href="https://maps.app.goo.gl/h2fYT5WwmHKT4QCg7">
+                      {item.description}
+                    </Link>
+                  ) : (
+                    <Typography variant="body1" sx={{ color: "grey.900" }}>
+                      {item.description}
+                    </Typography>
+                  )}
                 </div>
               </Stack>
             </Grid>
           ))}
         </Grid>
       </Container>
-    </Box>
+    </StyledBox>
   );
 }

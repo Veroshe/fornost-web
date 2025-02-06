@@ -13,6 +13,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import CloseRoundedIcon from "@mui/icons-material/CloseRounded";
 import Sitemark from "./SitemarkIcon";
 import { Outlet, Link } from "react-router-dom";
+import logo from "../../assets/stare.png";
 
 const StyledToolbar = styled(Toolbar)(({ theme }) => ({
   display: "flex",
@@ -27,7 +28,7 @@ const StyledToolbar = styled(Toolbar)(({ theme }) => ({
     ? `rgba(${theme.vars.palette.background.defaultChannel} / 0.4)`
     : alpha(theme.palette.background.default, 0.4),
   boxShadow: (theme.vars || theme).shadows[1],
-  padding: "8px 12px"
+  padding: "8px 20px"
 }));
 
 export default function AppAppBar() {
@@ -50,57 +51,36 @@ export default function AppAppBar() {
         }}
       >
         <Container maxWidth="lg">
-          <StyledToolbar variant="dense" disableGutters>
-            <Box
-              sx={{ flexGrow: 1, display: "flex", alignItems: "center", px: 0 }}
-            >
-              <Sitemark />
-              <Box sx={{ display: { xs: "none", md: "flex" } }}>
-                <Link to="/2025">
-                  <Button variant="text" color="info" size="small">
-                    Fornost 2025
-                  </Button>
-                </Link>
-                <Button variant="text" color="info" size="small">
-                  Testimonials
-                </Button>
-                <Button variant="text" color="info" size="small">
-                  Highlights
-                </Button>
-                <Button variant="text" color="info" size="small">
-                  Pricing
-                </Button>
-                <Button
-                  variant="text"
-                  color="info"
-                  size="small"
-                  sx={{ minWidth: 0 }}
-                >
-                  FAQ
-                </Button>
-                <Button
-                  variant="text"
-                  color="info"
-                  size="small"
-                  sx={{ minWidth: 0 }}
-                >
-                  Blog
-                </Button>
-              </Box>
-            </Box>
+          <StyledToolbar disableGutters>
             <Box
               sx={{
-                display: { xs: "none", md: "flex" },
-                gap: 1,
-                alignItems: "center"
+                flexGrow: 1,
+                display: "flex",
+                alignItems: "center",
+                px: 0,
+                justifyContent: "space-between"
               }}
             >
-              <Button color="primary" variant="text" size="small">
-                Sign in
-              </Button>
-              <Button color="primary" variant="contained" size="small">
-                Sign up
-              </Button>
+              <img src={logo} alt="Logo" style={{ height: 32 }} />
+              <Box sx={{ display: { xs: "none", md: "flex" } }}>
+                <Link to="/2025">
+                  <Button variant="text" color="error" size="large">
+                    O Fornoście
+                  </Button>
+                </Link>
+                <Button variant="text" color="error" size="large">
+                  Pierwszy raz
+                </Button>
+                <Button variant="text" color="info" size="large">
+                  Program
+                </Button>
+                <Button variant="text" color="info" size="large">
+                  Gra Główna
+                </Button>
+                <Button variant="text" color="info" size="large">
+                  Artykuły
+                </Button>
+              </Box>
             </Box>
             <Box sx={{ display: { xs: "flex", md: "none" }, gap: 1 }}>
               <IconButton aria-label="Menu button" onClick={toggleDrawer(true)}>

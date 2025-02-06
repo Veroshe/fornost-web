@@ -44,16 +44,16 @@ export const brand = {
 };
 
 export const gray = {
-  50: "hsl(220, 35%, 97%)",
-  100: "hsl(220, 30%, 94%)",
-  200: "hsl(220, 20%, 88%)",
-  300: "hsl(220, 20%, 80%)",
-  400: "hsl(220, 20%, 65%)",
-  500: "hsl(220, 20%, 42%)",
-  600: "hsl(220, 20%, 35%)",
-  700: "hsl(220, 20%, 25%)",
-  800: "hsl(220, 30%, 6%)",
-  900: "hsl(220, 35%, 3%)"
+  50: "#b6ada6",
+  100: "#b6ada6",
+  200: "#958c86",
+  300: "#6d655f",
+  400: "#5a524c",
+  500: "#3b342e",
+  600: "#1B140E",
+  700: "#110D09",
+  800: "#0F0C09",
+  900: "#0F0C09"
 };
 
 export const green = {
@@ -137,8 +137,8 @@ export const getDesignTokens = () => {
         paper: "hsl(220, 35%, 97%)"
       },
       text: {
-        primary: gray[800],
-        secondary: gray[600],
+        primary: "#000",
+        secondary: "000",
         warning: orange[400]
       },
       action: {
@@ -147,7 +147,7 @@ export const getDesignTokens = () => {
       }
     },
     typography: {
-      fontFamily: "Inter, sans-serif",
+      fontFamily: "Open Sans, sans-serif",
       h1: {
         fontSize: defaultTheme.typography.pxToRem(48),
         fontWeight: 600,
@@ -233,13 +233,13 @@ export const palette = {
   grey: {
     ...gray
   },
-  divider: alpha(gray[300], 0.4),
+  divider: alpha(gray[900], 0.4),
   background: {
     default: "#948F4A",
     paper: "hsl(220, 35%, 97%)"
   },
   text: {
-    primary: "#262118",
+    primary: "#000",
     secondary: "#262118",
     warning: orange[400]
   },
@@ -251,7 +251,7 @@ export const palette = {
 };
 
 export const typography = {
-  fontFamily: "Inter, sans-serif",
+  fontFamily: "Open Sans, sans-serif",
   h1: {
     fontSize: defaultTheme.typography.pxToRem(48),
     fontWeight: 600,
@@ -288,7 +288,7 @@ export const typography = {
     fontWeight: 500
   },
   body1: {
-    fontSize: defaultTheme.typography.pxToRem(14)
+    fontSize: defaultTheme.typography.pxToRem(16)
   },
   body2: {
     fontSize: defaultTheme.typography.pxToRem(14),

@@ -12,15 +12,13 @@ export default function Homepage() {
     <>
       <Hero />
       <div>
-        <Features />
-        <Divider />
-        <Testimonials />
-        <Divider />
         <Highlights />
-        <Divider />
+        {/* TODO: zamienić na organizacje */}
+        {/* <Testimonials /> */}
+
         <Pricing />
-        <Divider />
-        <FAQ />
+        {/* <Divider />
+        <FAQ /> */}
         <Divider />
         <Footer />
       </div>
