@@ -13,6 +13,7 @@ export default function Homepage() {
       <Hero />
       <div>
         <Highlights />
+        <Features />
         {/* TODO: zamienić na organizacje */}
         {/* <Testimonials /> */}
 

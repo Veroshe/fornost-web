@@ -5,8 +5,10 @@ import Card from "@mui/material/Card";
 import MuiChip from "@mui/material/Chip";
 import Container from "@mui/material/Container";
 import Typography from "@mui/material/Typography";
+import gondor2 from "../../assets/gondor2.png";
+import smok2 from "../../assets/smok2.png";
 
-import { styled } from "@mui/material/styles";
+import { styled, alpha } from "@mui/material/styles";
 
 import DevicesRoundedIcon from "@mui/icons-material/DevicesRounded";
 import EdgesensorHighRoundedIcon from "@mui/icons-material/EdgesensorHighRounded";
@@ -14,26 +16,27 @@ import ViewQuiltRoundedIcon from "@mui/icons-material/ViewQuiltRounded";
 
 const items = [
   {
-    icon: <ViewQuiltRoundedIcon />,
-    title: "Dashboard",
-    description:
-      "This item could provide a snapshot of the most important metrics or data points related to the product."
-    // imageLight: `url("${process.env.TEMPLATE_IMAGE_URL || 'https://mui.com'}/static/images/templates/templates-images/dash-light.png")`,
-    // imageDark: `url("${process.env.TEMPLATE_IMAGE_URL || 'https://mui.com'}/static/images/templates/templates-images/dash-dark.png")`,
+    title: "LARP - Przeprawa Królów",
+    item1: "Trzydniowy LARP terenowy 31.07 - 2.08",
+    item2: "Setting: Śródziemie J.R.R. Tolkiena",
+    item3: "LARP fabularny (z opcjonalną bitką)",
+    item4: "Przystępny dla nowych graczy",
+    image: `url(${gondor2})`
   },
   {
-    icon: <EdgesensorHighRoundedIcon />,
-    title: "Mobile integration",
-    description:
-      "This item could provide information about the mobile app version of the product."
-    // imageLight: `url("${process.env.TEMPLATE_IMAGE_URL || 'https://mui.com'}/static/images/templates/templates-images/mobile-light.png")`,
-    // imageDark: `url("${process.env.TEMPLATE_IMAGE_URL || 'https://mui.com'}/static/images/templates/templates-images/mobile-dark.png")`,
+    title: "LARPY i inne atrakcje",
+    item1:
+      "LARPY terenowe i chambery (m.in. 'Pstyk!' - zwycięzca Larpowych Laurów 2024)",
+    item2: "Prelekcje i warsztaty",
+    item3: "Turniej juggera",
+    image: `url(${smok2})`
   },
   {
-    icon: <DevicesRoundedIcon />,
-    title: "Available on all platforms",
-    description:
-      "This item could let users know the product is available on all platforms, such as web, mobile, and desktop."
+    title: "Tydzień chillery w lesie",
+    item1: "Codzienne wieczorne ogniska pełne muzyki i dobrej zabawy",
+    item2:
+      "Planszówki, sejse RPG, pogaduchy o najnowszych wydaniach Silmarillionu (i nie tylko!)",
+    item3: "Odpoczynek z dala od cywilizacji"
     // imageLight: `url("${process.env.TEMPLATE_IMAGE_URL || 'https://mui.com'}/static/images/templates/templates-images/devices-light.png")`,
     // imageDark: `url("${process.env.TEMPLATE_IMAGE_URL || 'https://mui.com'}/static/images/templates/templates-images/devices-dark.png")`,
   }
@@ -144,30 +147,37 @@ export default function Features() {
   const selectedFeature = items[selectedItemIndex];
 
   return (
-    <Container id="features" sx={{ py: { xs: 8, sm: 16 } }}>
-      <Box sx={{ width: { sm: "100%", md: "60%" } }}>
-        <Typography
-          component="h2"
-          variant="h4"
-          gutterBottom
-          sx={{ color: "text.primary" }}
-        >
-          Product features
-        </Typography>
-        <Typography
-          variant="body1"
-          sx={{ color: "text.secondary", mb: { xs: 2, sm: 4 } }}
-        >
-          Provide a brief overview of the key features of the product. For
-          example, you could list the number of features, their types or
-          benefits, and add-ons.
+    <Container
+      id="features"
+      sx={theme => ({
+        alignItems: "center",
+        width: "100%",
+        backgroundColor: alpha(theme.palette.background.default, 0.5),
+        boxShadow: theme.shadows[1],
+        padding: theme.spacing(3),
+        borderRadius: `calc(${theme.shape.borderRadius}px + 8px)`,
+        mt: { xs: 4, sm: 12 },
+        mb: { xs: 8, sm: 16 }
+      })}
+    >
+      <Box
+        sx={{
+          width: { sm: "100%" },
+          textAlign: { sm: "left", md: "center" },
+          mt: 2
+        }}
+      >
+        <Typography component="h2" variant="h2" gutterBottom>
+          Atrakcje konwentu
         </Typography>
       </Box>
+
       <Box
         sx={{
           display: "flex",
           flexDirection: { xs: "column", md: "row-reverse" },
-          gap: 2
+          gap: 2,
+          pt: 4
         }}
       >
         <div>
@@ -179,50 +189,61 @@ export default function Features() {
               height: "100%"
             }}
           >
-            {items.map(({ icon, title, description }, index) => (
-              <Box
-                key={index}
-                component={Button}
-                onClick={() => handleItemClick(index)}
-                sx={[
-                  theme => ({
-                    p: 2,
-                    height: "100%",
-                    width: "100%",
-                    "&:hover": {
-                      backgroundColor: (theme.vars || theme).palette.action
-                        .hover
-                    }
-                  }),
-                  selectedItemIndex === index && {
-                    backgroundColor: "action.selected"
-                  }
-                ]}
-              >
+            {items.map(
+              ({ icon, title, item1, item2, item3, item4, image }, index) => (
                 <Box
+                  key={index}
+                  component={Button}
+                  onClick={() => handleItemClick(index)}
                   sx={[
-                    {
+                    theme => ({
+                      p: 2,
+                      height: "100%",
                       width: "100%",
-                      display: "flex",
-                      flexDirection: "column",
-                      alignItems: "left",
-                      gap: 1,
-                      textAlign: "left",
-                      textTransform: "none",
-                      color: "text.secondary"
-                    },
+                      "&:hover": {
+                        backgroundColor: (theme.vars || theme).palette.action
+                          .hover
+                      },
+                      borderColor: (theme.vars || theme).palette.divider,
+                      backgroundColor: alpha(
+                        theme.palette.background.default,
+                        0.8
+                      ),
+                      boxShadow: theme.shadows[1]
+                    }),
                     selectedItemIndex === index && {
-                      color: "text.primary"
+                      backgroundColor: "action.selected"
                     }
                   ]}
                 >
-                  {icon}
-
-                  <Typography variant="h6">{title}</Typography>
-                  <Typography variant="body2">{description}</Typography>
+                  <Box
+                    sx={[
+                      {
+                        width: "100%",
+                        display: "flex",
+                        flexDirection: "column",
+                        alignItems: "left",
+                        gap: 1,
+                        textAlign: "left",
+                        textTransform: "none",
+                        color: "text.secondary"
+                      },
+                      selectedItemIndex === index && {
+                        color: "text.primary"
+                      }
+                    ]}
+                  >
+                    <Typography variant="h6">{title}</Typography>
+                    <ul>
+                      <li>{item1}</li>
+                      <li>{item2}</li>
+                      <li>{item3}</li>
+                      {item4 && <li>{item1}</li>}
+                    </ul>
+                  </Box>
                 </Box>
-              </Box>
-            ))}
+              )
+            )}
           </Box>
           <MobileLayout
             selectedItemIndex={selectedItemIndex}
@@ -243,7 +264,9 @@ export default function Features() {
               height: "100%",
               width: "100%",
               display: { xs: "none", sm: "flex" },
-              pointerEvents: "none"
+              pointerEvents: "none",
+              border: "none",
+              background: "none"
             }}
           >
             <Box
@@ -252,19 +275,9 @@ export default function Features() {
                 width: 420,
                 height: 500,
                 backgroundSize: "contain",
-                backgroundImage: "var(--items-imageLight)",
-                ...theme.applyStyles("dark", {
-                  backgroundImage: "var(--items-imageDark)"
-                })
+                backgroundImage: items[selectedItemIndex].image,
+                backgroundRepeat: "no-repeat"
               })}
-              style={
-                items[selectedItemIndex]
-                  ? ({
-                      "--items-imageLight": items[selectedItemIndex].imageLight,
-                      "--items-imageDark": items[selectedItemIndex].imageDark
-                    } as any)
-                  : {}
-              }
             />
           </Card>
         </Box>

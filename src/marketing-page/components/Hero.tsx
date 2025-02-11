@@ -9,7 +9,7 @@ import TextField from "@mui/material/TextField";
 import Typography from "@mui/material/Typography";
 import olca from "../../assets/olca.png";
 import { visuallyHidden } from "@mui/utils";
-import { styled } from "@mui/material/styles";
+import { styled, alpha } from "@mui/material/styles";
 
 const StyledBox = styled("div")(({ theme }) => ({
   alignSelf: "center",
@@ -25,12 +25,6 @@ const StyledBox = styled("div")(({ theme }) => ({
     marginTop: theme.spacing(10),
     height: 400
   }
-  // ...theme.applyStyles("dark", {
-  //   boxShadow: "0 0 24px 12px hsla(210, 100%, 25%, 0.2)",
-  //   // backgroundImage: `url(${process.env.TEMPLATE_IMAGE_URL || 'https://mui.com'}/static/screenshots/material-ui/getting-started/templates/dashboard-dark.jpg)`,
-  //   outlineColor: "hsla(220, 20%, 42%, 0.1)",
-  //   borderColor: (theme.vars || theme).palette.grey[700]
-  // })
 }));
 
 export default function Hero() {
@@ -54,7 +48,14 @@ export default function Hero() {
         <Stack
           spacing={2}
           useFlexGap
-          sx={{ alignItems: "center", width: { xs: "100%", sm: "70%" } }}
+          sx={theme => ({
+            alignItems: "center",
+            width: { xs: "100%", sm: "70%" },
+            backgroundColor: alpha(theme.palette.background.default, 0.5),
+            boxShadow: theme.shadows[1],
+            padding: theme.spacing(3),
+            borderRadius: `calc(${theme.shape.borderRadius}px + 8px)`
+          })}
         >
           <Typography
             variant="h1"

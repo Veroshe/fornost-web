@@ -23,13 +23,9 @@ import { styled, alpha } from "@mui/material/styles";
 
 const StyledBox = styled(Box)(({ theme }) => ({
   borderRadius: `calc(${theme.shape.borderRadius}px + 8px)`,
-  backdropFilter: "blur(24px)",
-  border: "1px solid",
-  borderColor: (theme.vars || theme).palette.divider,
-  backgroundColor: theme.vars
-    ? `rgba(${theme.vars.palette.background.defaultChannel} / 0.4)`
-    : alpha(theme.palette.background.default, 0.4),
-  boxShadow: (theme.vars || theme).shadows[1]
+  backgroundColor: alpha(theme.palette.background.default, 0.5),
+  boxShadow: theme.shadows[1],
+  padding: theme.spacing(3)
 }));
 
 const items = [
@@ -63,7 +59,7 @@ export default function Highlights() {
     <StyledBox
       id="highlights"
       sx={{
-        pt: { xs: 4, sm: 12 },
+        pt: { xs: 4, sm: 8 },
         pb: { xs: 8, sm: 16 }
       }}
     >
@@ -82,7 +78,7 @@ export default function Highlights() {
             textAlign: { sm: "left", md: "center" }
           }}
         >
-          <Typography component="h2" variant="h4" gutterBottom>
+          <Typography component="h2" variant="h2" gutterBottom>
             Najwaniejsze informacje
           </Typography>
         </Box>

@@ -12,7 +12,7 @@ import Typography from "@mui/material/Typography";
 import { Link } from "@mui/material";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
-
+import { alpha } from "@mui/material/styles";
 import AutoAwesomeIcon from "@mui/icons-material/AutoAwesome";
 import CheckCircleRoundedIcon from "@mui/icons-material/CheckCircleRounded";
 import { ThemeContext } from "@emotion/react";
@@ -49,15 +49,21 @@ export default function Pricing() {
   return (
     <Container
       id="pricing"
-      sx={{
-        pt: { xs: 4, sm: 12 },
+      sx={theme => ({
+        pt: { xs: 4, sm: 8 },
         pb: { xs: 8, sm: 16 },
+        mt: { xs: 4, sm: 12 },
+        mb: { xs: 8, sm: 16 },
         position: "relative",
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
-        gap: { xs: 3, sm: 6 }
-      }}
+        gap: { xs: 3, sm: 6 },
+        backgroundColor: alpha(theme.palette.background.default, 0.5),
+        boxShadow: theme.shadows[1],
+
+        borderRadius: `calc(${theme.shape.borderRadius}px + 8px)`
+      })}
     >
       <Box
         sx={{
@@ -67,14 +73,11 @@ export default function Pricing() {
       >
         <Typography
           component="h2"
-          variant="h4"
+          variant="h2"
           gutterBottom
           sx={{ color: "text.primary" }}
         >
           Gdzie nas znaleść
-        </Typography>
-        <Typography variant="body1" sx={{ color: "text.secondary" }}>
-          <br />
         </Typography>
       </Box>
       <Grid

@@ -235,7 +235,7 @@ export const palette = {
   },
   divider: alpha(gray[900], 0.4),
   background: {
-    default: "#948F4A",
+    default: "#b8bb57",
     paper: "hsl(220, 35%, 97%)"
   },
   text: {
@@ -244,8 +244,8 @@ export const palette = {
     warning: orange[400]
   },
   action: {
-    hover: alpha(gray[200], 0.2),
-    selected: `${alpha(gray[200], 0.3)}`
+    hover: alpha(gray[200], 0.4),
+    selected: `${alpha(gray[200], 0.4)}`
   },
   baseShadow: "#4C4230 0px 4px 16px 0px, #4C4230 0px 8px 16px -5px"
 };
