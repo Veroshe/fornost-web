@@ -1,4 +1,5 @@
 import * as React from "react";
+import { useEffect } from "react";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import Card from "@mui/material/Card";
@@ -152,6 +153,19 @@ export default function Features() {
     setSelectedItemIndex(index);
   };
 
+  useEffect(() => {
+    const interval = setInterval(
+      () =>
+        setSelectedItemIndex(selectedItemIndex =>
+          selectedItemIndex < 2 ? selectedItemIndex + 1 : 0
+        ),
+      5000
+    );
+    return () => {
+      clearInterval(interval);
+    };
+  }, []);
+
   const selectedFeature = items[selectedItemIndex];
 
   return (
@@ -217,7 +231,8 @@ export default function Features() {
                         theme.palette.background.default,
                         0.8
                       ),
-                      boxShadow: theme.shadows[1]
+                      boxShadow: theme.shadows[1],
+                      transition: "background-color 700ms linear"
                     }),
                     selectedItemIndex === index && {
                       backgroundColor: "action.selected"
@@ -285,7 +300,8 @@ export default function Features() {
                 backgroundSize: "contain",
                 backgroundImage: items[selectedItemIndex].image,
                 backgroundRepeat: "no-repeat",
-                borderRadius: 2
+                borderRadius: 2,
+                transition: "background-image 700ms linear"
               })}
             />
           </Card>
