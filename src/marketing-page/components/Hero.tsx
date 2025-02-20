@@ -45,7 +45,7 @@ export default function Hero() {
           alignItems: "center",
           pl: { xs: 2, sm: 0 },
           pr: { xs: 2, sm: 0 },
-          pt: { xs: 14, sm: 20 },
+          pt: { xs: 8, sm: 12 },
           pb: { xs: 8, sm: 12 }
         }}
       >
