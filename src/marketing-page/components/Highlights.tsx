@@ -39,7 +39,7 @@ const items = [
     icon: <TrainIcon />,
     title: "Dojazd",
     description:
-      "Najbliższą miejscowością, do której dojeżdża pociąg oraz autobusy dalekobieżne jest Myszków. Z Myszkowa można dojechać busami do Żarek, skąd na miejsce imprezy jest około 6 kilometrów."
+      "Najbliższą miejscowością, do której dojeżdża pociąg oraz autobusy dalekobieżne jest Myszków. \n Z Myszkowa można dojechać busami do Żarek, skąd na miejsce imprezy jest około 6 kilometrów."
   },
   {
     icon: <RestaurantMenuIcon />,
@@ -93,7 +93,8 @@ export default function Highlights() {
                 p: 3,
                 height: "100%",
                 borderColor: "hsla(220, 25%, 25%, 0.3)",
-                backgroundColor: "background.default"
+                backgroundColor: "background.default",
+                alignItems: "flex-start"
               }}
             >
               <Box sx={{ opacity: "50%" }}>
@@ -102,20 +103,28 @@ export default function Highlights() {
               <div>
                 <Typography
                   gutterBottom
-                  sx={{ fontWeight: "bold" }}
+                  sx={{ fontWeight: "bold", textAlign: "left" }}
                   variant="h6"
                 >
                   Gdzie
                 </Typography>
 
-                <Typography variant="body1" sx={{ color: "grey.900" }}>
+                <Typography
+                  variant="body1"
+                  sx={{
+                    color: "grey.900",
+                    textAlign: "left",
+                    whiteSpace: "pre-line"
+                  }}
+                >
                   <b>26.07 - 03.08.2025</b> we wsi{" "}
                   <Link href="https://maps.app.goo.gl/h2fYT5WwmHKT4QCg7">
                     Czatachowa, woj. śląskie
                   </Link>
-                  , położonej na Jurze Krakowsko-Częstochowskiej. Teren Fornostu
-                  (pole namiotowe), znajduje się na samym końcu jednej z dwóch
-                  dróg w miejscowości.
+                  , położonej na Jurze Krakowsko-Częstochowskiej.
+                  <br />
+                  Teren Fornostu (pole namiotowe), znajduje się na samym końcu
+                  jednej z dwóch dróg w miejscowości.
                 </Typography>
               </div>
             </Stack>
@@ -130,7 +139,8 @@ export default function Highlights() {
                 p: 3,
                 height: "100%",
                 borderColor: "hsla(220, 25%, 25%, 0.3)",
-                backgroundColor: "background.default"
+                backgroundColor: "background.default",
+                alignItems: "flex-start"
               }}
             >
               <Box sx={{ opacity: "50%" }}>
@@ -139,7 +149,7 @@ export default function Highlights() {
               <div>
                 <Typography
                   gutterBottom
-                  sx={{ fontWeight: "bold" }}
+                  sx={{ fontWeight: "bold", textAlign: "left" }}
                   variant="h6"
                 >
                   Bilety
@@ -147,26 +157,46 @@ export default function Highlights() {
 
                 <Typography
                   variant="body1"
-                  sx={{ color: "grey.900", fontWeight: "bold" }}
+                  sx={{
+                    color: "grey.900",
+                    fontWeight: "bold",
+                    textAlign: "left"
+                  }}
                 >
-                  Tura II (07.01.2025 - 25.07.2025)
+                  Przedsprzedaż II (07.01.2025 - 25.07.2025)
                 </Typography>
-                <Typography variant="body1" sx={{ color: "grey.900" }}>
+                <Typography
+                  variant="body1"
+                  sx={{ color: "grey.900", textAlign: "left" }}
+                >
                   bilet normalny: 550zł
                 </Typography>
-                <Typography variant="body1" sx={{ color: "grey.900" }}>
+                <Typography
+                  variant="body1"
+                  sx={{ color: "grey.900", textAlign: "left" }}
+                >
                   bilet dla studenta/ucznia/doktoranta: 500zł
                 </Typography>
                 <Typography
                   variant="body1"
-                  sx={{ color: "grey.900", fontWeight: "bold" }}
+                  sx={{
+                    color: "grey.900",
+                    fontWeight: "bold",
+                    textAlign: "left"
+                  }}
                 >
-                  Tura III (na konwencie)
+                  Na konwencie
                 </Typography>
-                <Typography variant="body1" sx={{ color: "grey.900" }}>
+                <Typography
+                  variant="body1"
+                  sx={{ color: "grey.900", textAlign: "left" }}
+                >
                   bilet normalny: 700zł
                 </Typography>
-                <Typography variant="body1" sx={{ color: "grey.900" }}>
+                <Typography
+                  variant="body1"
+                  sx={{ color: "grey.900", textAlign: "left" }}
+                >
                   bilet dla studenta/ucznia/doktoranta: 650zł
                 </Typography>
 
@@ -176,6 +206,8 @@ export default function Highlights() {
                     color="primary"
                     size="large"
                     sx={{ minWidth: "fit-content", marginTop: 2 }}
+                    href="https://forms.gle/HNEsudkPU7hbJMQVA"
+                    target="_blank"
                   >
                     Kup bilet
                   </Button>
@@ -195,14 +227,15 @@ export default function Highlights() {
                   p: 3,
                   height: "100%",
                   borderColor: "hsla(220, 25%, 25%, 0.3)",
-                  backgroundColor: "background.default"
+                  backgroundColor: "background.default",
+                  alignItems: "flex-start"
                 }}
               >
                 <Box sx={{ opacity: "50%" }}>{item.icon}</Box>
                 <div>
                   <Typography
                     gutterBottom
-                    sx={{ fontWeight: "bold" }}
+                    sx={{ fontWeight: "bold", textAlign: "left" }}
                     variant="h6"
                   >
                     {item.title}
@@ -213,7 +246,14 @@ export default function Highlights() {
                       {item.description}
                     </Link>
                   ) : (
-                    <Typography variant="body1" sx={{ color: "grey.900" }}>
+                    <Typography
+                      variant="body1"
+                      sx={{
+                        color: "grey.900",
+                        textAlign: "left",
+                        whiteSpace: "pre-line"
+                      }}
+                    >
                       {item.description}
                     </Typography>
                   )}

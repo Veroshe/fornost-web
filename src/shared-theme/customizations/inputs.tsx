@@ -183,20 +183,12 @@ export const inputsCustomizations: Components<Theme> = {
             style: {
               color: gray[600],
               "&:hover": {
-                backgroundColor: alpha(brand[900], 0.5)
+                backgroundColor: alpha(brand[900], 0.5),
+                color: "#000"
               },
               "&:active": {
                 backgroundColor: gray[200]
-              },
-              ...theme.applyStyles("dark", {
-                color: gray[50],
-                "&:hover": {
-                  backgroundColor: gray[700]
-                },
-                "&:active": {
-                  backgroundColor: alpha(gray[700], 0.7)
-                }
-              })
+              }
             }
           },
           {

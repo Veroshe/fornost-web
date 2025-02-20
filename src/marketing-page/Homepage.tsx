@@ -18,9 +18,8 @@ export default function Homepage() {
         {/* <Testimonials /> */}
 
         <Pricing />
-        {/* <Divider />
-        <FAQ /> */}
-        <Divider />
+
+        <FAQ />
         <Footer />
       </div>
     </>

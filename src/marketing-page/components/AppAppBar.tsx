@@ -39,7 +39,7 @@ export default function AppAppBar() {
   return (
     <>
       <AppBar
-        position="fixed"
+        position="static"
         enableColorOnDark
         sx={{
           boxShadow: 0,
@@ -61,12 +61,17 @@ export default function AppAppBar() {
             >
               <img src={logo} alt="Logo" style={{ height: 32 }} />
               <Box sx={{ display: { xs: "none", md: "flex" } }}>
-                <Link to="/2025">
-                  <Button variant="text" color="error" size="large">
-                    O Fornoście
-                  </Button>
-                </Link>
-                <Button variant="text" color="error" size="large">
+                <Button
+                  variant="text"
+                  color="error"
+                  size="large"
+                  href=" https://www.facebook.com/events/895237192729983"
+                  target="_blank"
+                >
+                  Przeprawa królów
+                </Button>
+
+                {/* <Button variant="text" color="error" size="large">
                   Pierwszy raz
                 </Button>
                 <Button variant="text" color="info" size="large">
@@ -77,7 +82,7 @@ export default function AppAppBar() {
                 </Button>
                 <Button variant="text" color="info" size="large">
                   Artykuły
-                </Button>
+                </Button> */}
               </Box>
             </Box>
             <Box sx={{ display: { xs: "flex", md: "none" }, gap: 1 }}>
@@ -106,25 +111,20 @@ export default function AppAppBar() {
                     </IconButton>
                   </Box>
 
-                  <Link to="/2025">
-                    <MenuItem>Fornost 2025</MenuItem>
-                  </Link>
-                  <MenuItem>Testimonials</MenuItem>
+                  {/* <Link to="/2025"> */}
+                  <MenuItem
+                    href=" https://www.facebook.com/events/895237192729983"
+                    target="_blank"
+                    component="a"
+                  >
+                    Przeprawa królów
+                  </MenuItem>
+                  {/* </Link> */}
+                  {/* <MenuItem>Testimonials</MenuItem>
                   <MenuItem>Highlights</MenuItem>
                   <MenuItem>Pricing</MenuItem>
                   <MenuItem>FAQ</MenuItem>
-                  <MenuItem>Blog</MenuItem>
-                  <Divider sx={{ my: 3 }} />
-                  <MenuItem>
-                    <Button color="primary" variant="contained" fullWidth>
-                      Sign up
-                    </Button>
-                  </MenuItem>
-                  <MenuItem>
-                    <Button color="primary" variant="outlined" fullWidth>
-                      Sign in
-                    </Button>
-                  </MenuItem>
+                  <MenuItem>Blog</MenuItem> */}
                 </Box>
               </Drawer>
             </Box>

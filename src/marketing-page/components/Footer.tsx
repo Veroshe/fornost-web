@@ -60,12 +60,16 @@ export default function Footer() {
         </Box>
         <Box
           sx={{
-            display: { xs: "none", sm: "flex" },
+            display: { xs: "flex", sm: "flex" },
             flexDirection: "column",
             gap: 1
           }}
         >
-          <Link variant="body2" href="#">
+          <Link
+            variant="body2"
+            href="https://drive.google.com/file/d/1VjDghxGRq-vdq5Lxz7vb2sdrI8ODRCYB/view?usp=sharing"
+            target="_blank"
+          >
             Regulamin
           </Link>
         </Box>

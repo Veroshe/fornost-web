@@ -24,13 +24,15 @@ a:hover {
 
 body {
   margin: 0;
-  display: flex;
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
   /* background: rgb(161, 171, 82);
     background: linear-gradient(180deg, rgba(161, 171, 82, 1) 29%, rgba(116, 124, 60, 1) 51%, rgba(64, 52, 38, 1) 100%); */
   background-image: url("../src/assets/test.jpg");
+      background-position: top;
+        background-size: contain;
+        background-repeat: repeat-y;
 }
 
 h1 {

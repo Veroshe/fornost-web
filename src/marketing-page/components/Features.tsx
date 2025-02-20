@@ -5,23 +5,26 @@ import Card from "@mui/material/Card";
 import MuiChip from "@mui/material/Chip";
 import Container from "@mui/material/Container";
 import Typography from "@mui/material/Typography";
-import gondor2 from "../../assets/gondor2.png";
 import smok2 from "../../assets/smok2.png";
+import las from "../../assets/las.png";
+import szarp from "../../assets/szarp.png";
+import szarpMobile from "../../assets/szarp_mobile.png";
+import marek from "../../assets/marek.png";
+import marekMobile from "../../assets/marek_mobile.png";
+import gandi from "../../assets/gandi.png";
+import gandiMobile from "../../assets/gandi_mobile.png";
 
 import { styled, alpha } from "@mui/material/styles";
-
-import DevicesRoundedIcon from "@mui/icons-material/DevicesRounded";
-import EdgesensorHighRoundedIcon from "@mui/icons-material/EdgesensorHighRounded";
-import ViewQuiltRoundedIcon from "@mui/icons-material/ViewQuiltRounded";
 
 const items = [
   {
     title: "LARP - Przeprawa Królów",
-    item1: "Trzydniowy LARP terenowy 31.07 - 2.08",
+    item1: "Trzydniowy LARP terenowy 31.07 - 2.08.2025",
     item2: "Setting: Śródziemie J.R.R. Tolkiena",
     item3: "LARP fabularny (z opcjonalną bitką)",
     item4: "Przystępny dla nowych graczy",
-    image: `url(${gondor2})`
+    image: `url(${szarp})`,
+    imageMobile: `url(${szarpMobile})`
   },
   {
     title: "LARPY i inne atrakcje",
@@ -29,16 +32,17 @@ const items = [
       "LARPY terenowe i chambery (m.in. 'Pstyk!' - zwycięzca Larpowych Laurów 2024)",
     item2: "Prelekcje i warsztaty",
     item3: "Turniej juggera",
-    image: `url(${smok2})`
+    image: `url(${marek})`,
+    imageMobile: `url(${marekMobile})`
   },
   {
     title: "Tydzień chillery w lesie",
     item1: "Codzienne wieczorne ogniska pełne muzyki i dobrej zabawy",
     item2:
       "Planszówki, sejse RPG, pogaduchy o najnowszych wydaniach Silmarillionu (i nie tylko!)",
-    item3: "Odpoczynek z dala od cywilizacji"
-    // imageLight: `url("${process.env.TEMPLATE_IMAGE_URL || 'https://mui.com'}/static/images/templates/templates-images/devices-light.png")`,
-    // imageDark: `url("${process.env.TEMPLATE_IMAGE_URL || 'https://mui.com'}/static/images/templates/templates-images/devices-dark.png")`,
+    item3: "Odpoczynek z dala od cywilizacji",
+    image: `url(${gandi})`,
+    imageMobile: `url(${gandiMobile})`
   }
 ];
 
@@ -100,26 +104,30 @@ export function MobileLayout({
           />
         ))}
       </Box>
-      <Card variant="outlined">
+      <Card
+        variant="outlined"
+        sx={[
+          theme => ({
+            p: 2,
+            height: "100%",
+            width: "100%",
+            "&:hover": {
+              backgroundColor: (theme.vars || theme).palette.action.hover
+            },
+            borderColor: (theme.vars || theme).palette.divider,
+            backgroundColor: alpha(theme.palette.background.default, 0.8),
+            boxShadow: theme.shadows[1]
+          })
+        ]}
+      >
         <Box
           sx={theme => ({
             mb: 2,
             backgroundSize: "cover",
-            backgroundPosition: "center",
+            backgroundPosition: "bottom",
             minHeight: 280,
-            backgroundImage: "var(--items-imageLight)",
-            ...theme.applyStyles("dark", {
-              backgroundImage: "var(--items-imageDark)"
-            })
+            backgroundImage: items[selectedItemIndex].imageMobile
           })}
-          style={
-            items[selectedItemIndex]
-              ? ({
-                  "--items-imageLight": items[selectedItemIndex].imageLight,
-                  "--items-imageDark": items[selectedItemIndex].imageDark
-                } as any)
-              : {}
-          }
         />
         <Box sx={{ px: 2, pb: 2 }}>
           <Typography
@@ -238,7 +246,7 @@ export default function Features() {
                       <li>{item1}</li>
                       <li>{item2}</li>
                       <li>{item3}</li>
-                      {item4 && <li>{item1}</li>}
+                      {item4 && <li>{item4}</li>}
                     </ul>
                   </Box>
                 </Box>
@@ -276,7 +284,8 @@ export default function Features() {
                 height: 500,
                 backgroundSize: "contain",
                 backgroundImage: items[selectedItemIndex].image,
-                backgroundRepeat: "no-repeat"
+                backgroundRepeat: "no-repeat",
+                borderRadius: 2
               })}
             />
           </Card>

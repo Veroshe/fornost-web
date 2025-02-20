@@ -14,16 +14,18 @@ import { styled, alpha } from "@mui/material/styles";
 const StyledBox = styled("div")(({ theme }) => ({
   alignSelf: "center",
   width: "100%",
-  height: 400,
+  height: 170,
   marginTop: theme.spacing(8),
-  borderRadius: (theme.vars || theme).shape.borderRadius,
-  boxShadow: (theme.vars || theme).shadows[1],
+  backgroundPositionX: "center",
   backgroundImage: `url(${olca})`,
-  backgroundSize: "cover",
+  backgroundSize: "contain",
   backgroundRepeat: "no-repeat",
-  [theme.breakpoints.up("sm")]: {
+  [theme.breakpoints.up("md")]: {
     marginTop: theme.spacing(10),
-    height: 400
+    height: 400,
+    backgroundSize: "cover",
+    boxShadow: (theme.vars || theme).shadows[1],
+    borderRadius: (theme.vars || theme).shape.borderRadius
   }
 }));
 
@@ -41,6 +43,8 @@ export default function Hero() {
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
+          pl: { xs: 2, sm: 0 },
+          pr: { xs: 2, sm: 0 },
           pt: { xs: 14, sm: 20 },
           pb: { xs: 8, sm: 12 }
         }}
@@ -81,9 +85,11 @@ export default function Hero() {
           <Typography variant="h6">
             Fornost to tygodniowy, terenowy konwent dla miłośników fantasy.
             Odbywa się w miejscowości Czatachowa położnej na Jurze
-            Krakowsko-Częstochowskiej. Program imprezy pełny jest larpów,
-            warsztatów i konkursów. Główną atrakcję stanowi 2-dniowy LARP
-            osadzony w świecie J.R.R. Tolkiena.
+            Krakowsko-Częstochowskiej.
+          </Typography>
+          <Typography variant="h6">
+            Program imprezy pełny jest larpów, warsztatów i konkursów. Główną
+            atrakcję stanowi 2-dniowy LARP osadzony w świecie J.R.R. Tolkiena.
           </Typography>
           <Stack
             direction={{ xs: "column", sm: "row" }}
@@ -97,6 +103,7 @@ export default function Hero() {
               color="primary"
               size="large"
               sx={{ minWidth: "fit-content" }}
+              href="#highlights"
             >
               Dowiedz się więcej
             </Button>

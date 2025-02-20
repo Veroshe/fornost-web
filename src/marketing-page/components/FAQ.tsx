@@ -1,12 +1,13 @@
-import * as React from 'react';
-import Accordion from '@mui/material/Accordion';
-import AccordionDetails from '@mui/material/AccordionDetails';
-import AccordionSummary from '@mui/material/AccordionSummary';
-import Box from '@mui/material/Box';
-import Container from '@mui/material/Container';
-import Link from '@mui/material/Link';
-import Typography from '@mui/material/Typography';
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import * as React from "react";
+import Accordion from "@mui/material/Accordion";
+import AccordionDetails from "@mui/material/AccordionDetails";
+import AccordionSummary from "@mui/material/AccordionSummary";
+import Box from "@mui/material/Box";
+import Container from "@mui/material/Container";
+import Link from "@mui/material/Link";
+import Typography from "@mui/material/Typography";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import { styled, alpha } from "@mui/material/styles";
 
 export default function FAQ() {
   const [expanded, setExpanded] = React.useState<string[]>([]);
@@ -16,137 +17,166 @@ export default function FAQ() {
       setExpanded(
         isExpanded
           ? [...expanded, panel]
-          : expanded.filter((item) => item !== panel),
+          : expanded.filter(item => item !== panel)
       );
     };
 
   return (
     <Container
       id="faq"
-      sx={{
-        pt: { xs: 4, sm: 12 },
-        pb: { xs: 8, sm: 16 },
-        position: 'relative',
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        gap: { xs: 3, sm: 6 },
-      }}
+      sx={theme => ({
+        alignItems: "center",
+        width: "100%",
+        backgroundColor: alpha(theme.palette.background.default, 0.5),
+        boxShadow: theme.shadows[1],
+        padding: theme.spacing(3),
+        borderRadius: `calc(${theme.shape.borderRadius}px + 8px)`,
+        mt: { xs: 4, sm: 12 },
+        mb: { xs: 8, sm: 16 }
+      })}
     >
-      <Typography
-        component="h2"
-        variant="h4"
+      <Box
         sx={{
-          color: 'text.primary',
-          width: { sm: '100%', md: '60%' },
-          textAlign: { sm: 'left', md: 'center' },
+          width: { sm: "100%" },
+          textAlign: { sm: "left", md: "center" },
+          mt: 2
         }}
       >
-        Frequently asked questions
-      </Typography>
-      <Box sx={{ width: '100%' }}>
+        <Typography component="h2" variant="h2" gutterBottom>
+          FAQ
+        </Typography>
+      </Box>
+      <Box sx={{ width: "100%" }}>
         <Accordion
-          expanded={expanded.includes('panel1')}
-          onChange={handleChange('panel1')}
+          expanded={expanded.includes("panel1")}
+          onChange={handleChange("panel1")}
         >
           <AccordionSummary
             expandIcon={<ExpandMoreIcon />}
             aria-controls="panel1d-content"
             id="panel1d-header"
           >
-            <Typography component="h3" variant="subtitle2">
-              How do I contact customer support if I have a question or issue?
+            <Typography
+              component="h3"
+              variant="subtitle1"
+              sx={{ typography: { sm: "subtitle1", xs: "subtitle2" } }}
+            >
+              Czy jeśli kupuje bilet na LARP 'Przeprawa Królów' to muszę
+              dodatkowo kupić bilet na konwent?
             </Typography>
           </AccordionSummary>
           <AccordionDetails>
             <Typography
-              variant="body2"
-              gutterBottom
-              sx={{ maxWidth: { sm: '100%', md: '70%' } }}
+              sx={{
+                maxWidth: { sm: "80%", xs: "100%" },
+                textAlign: "left",
+                typography: { sm: "body1", xs: "body2" }
+              }}
             >
-              You can reach our customer support team by emailing&nbsp;
-              <Link href="mailto:support@email.com">support@email.com</Link>
-              &nbsp;or calling our toll-free number. We&apos;re here to assist you
-              promptly.
+              Nie, bilet na LARP 'Przeprawa Królów' zawiera w sobie bilet na
+              konwent na dni w których odbywa się LARP.
             </Typography>
           </AccordionDetails>
         </Accordion>
-        <Accordion
-          expanded={expanded.includes('panel2')}
-          onChange={handleChange('panel2')}
+        {/* <Accordion
+          expanded={expanded.includes("panel2")}
+          onChange={handleChange("panel2")}
         >
           <AccordionSummary
             expandIcon={<ExpandMoreIcon />}
             aria-controls="panel2d-content"
             id="panel2d-header"
           >
-            <Typography component="h3" variant="subtitle2">
+            <Typography
+              component="h3"
+              variant="subtitle1"
+              sx={{ typography: { sm: "subtitle1", xs: "subtitle2" } }}
+            >
               Can I return the product if it doesn&apos;t meet my expectations?
             </Typography>
           </AccordionSummary>
           <AccordionDetails>
             <Typography
-              variant="body2"
+              variant="body1"
               gutterBottom
-              sx={{ maxWidth: { sm: '100%', md: '70%' } }}
+              sx={{
+                maxWidth: { sm: "80%", xs: "100%" },
+                textAlign: "left",
+                typography: { sm: "body1", xs: "body2" }
+              }}
             >
-              Absolutely! We offer a hassle-free return policy. If you&apos;re not
-              completely satisfied, you can return the product within [number of
-              days] days for a full refund or exchange.
+              Absolutely! We offer a hassle-free return policy. If you&apos;re
+              not completely satisfied, you can return the product within
+              [number of days] days for a full refund or exchange.
             </Typography>
           </AccordionDetails>
         </Accordion>
         <Accordion
-          expanded={expanded.includes('panel3')}
-          onChange={handleChange('panel3')}
+          expanded={expanded.includes("panel3")}
+          onChange={handleChange("panel3")}
         >
           <AccordionSummary
             expandIcon={<ExpandMoreIcon />}
             aria-controls="panel3d-content"
             id="panel3d-header"
           >
-            <Typography component="h3" variant="subtitle2">
+            <Typography
+              component="h3"
+              sx={{ typography: { sm: "subtitle1", xs: "subtitle2" } }}
+            >
               What makes your product stand out from others in the market?
             </Typography>
           </AccordionSummary>
           <AccordionDetails>
             <Typography
-              variant="body2"
+              variant="body1"
               gutterBottom
-              sx={{ maxWidth: { sm: '100%', md: '70%' } }}
+              sx={{
+                maxWidth: { sm: "80%", xs: "100%" },
+                textAlign: "left",
+                typography: { sm: "body1", xs: "body2" }
+              }}
             >
-              Our product distinguishes itself through its adaptability, durability,
-              and innovative features. We prioritize user satisfaction and
-              continually strive to exceed expectations in every aspect.
+              Our product distinguishes itself through its adaptability,
+              durability, and innovative features. We prioritize user
+              satisfaction and continually strive to exceed expectations in
+              every aspect.
             </Typography>
           </AccordionDetails>
         </Accordion>
         <Accordion
-          expanded={expanded.includes('panel4')}
-          onChange={handleChange('panel4')}
+          expanded={expanded.includes("panel4")}
+          onChange={handleChange("panel4")}
         >
           <AccordionSummary
             expandIcon={<ExpandMoreIcon />}
             aria-controls="panel4d-content"
             id="panel4d-header"
           >
-            <Typography component="h3" variant="subtitle2">
+            <Typography
+              component="h3"
+              sx={{ typography: { sm: "subtitle1", xs: "subtitle2" } }}
+            >
               Is there a warranty on the product, and what does it cover?
             </Typography>
           </AccordionSummary>
           <AccordionDetails>
             <Typography
-              variant="body2"
+              variant="body1"
               gutterBottom
-              sx={{ maxWidth: { sm: '100%', md: '70%' } }}
+              sx={{
+                maxWidth: { sm: "80%", xs: "100%" },
+                textAlign: "left",
+                typography: { sm: "body1", xs: "body2" }
+              }}
             >
-              Yes, our product comes with a [length of warranty] warranty. It covers
-              defects in materials and workmanship. If you encounter any issues
-              covered by the warranty, please contact our customer support for
-              assistance.
+              Yes, our product comes with a [length of warranty] warranty. It
+              covers defects in materials and workmanship. If you encounter any
+              issues covered by the warranty, please contact our customer
+              support for assistance.
             </Typography>
           </AccordionDetails>
-        </Accordion>
+        </Accordion> */}
       </Box>
     </Container>
   );
