@@ -7,7 +7,7 @@ import Link from "@mui/material/Link";
 import Stack from "@mui/material/Stack";
 import TextField from "@mui/material/TextField";
 import Typography from "@mui/material/Typography";
-import olca from "../../assets/olca.png";
+import olca from "../../assets/olca.jpg";
 import { visuallyHidden } from "@mui/utils";
 import { styled, alpha } from "@mui/material/styles";
 
@@ -89,7 +89,7 @@ export default function Hero() {
           </Typography>
           <Typography variant="h6">
             Program imprezy pełny jest larpów, warsztatów i konkursów. Główną
-            atrakcję stanowi 2-dniowy LARP osadzony w świecie J.R.R. Tolkiena.
+            atrakcję stanowi 3-dniowy LARP osadzony w świecie J.R.R. Tolkiena.
           </Typography>
           <Stack
             direction={{ xs: "column", sm: "row" }}

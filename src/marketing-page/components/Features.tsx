@@ -6,14 +6,12 @@ import Card from "@mui/material/Card";
 import MuiChip from "@mui/material/Chip";
 import Container from "@mui/material/Container";
 import Typography from "@mui/material/Typography";
-import smok2 from "../../assets/smok2.png";
-import las from "../../assets/las.png";
-import szarp from "../../assets/szarp.png";
-import szarpMobile from "../../assets/szarp_mobile.png";
-import marek from "../../assets/marek.png";
-import marekMobile from "../../assets/marek_mobile.png";
-import gandi from "../../assets/gandi.png";
-import gandiMobile from "../../assets/gandi_mobile.png";
+import szarp from "../../assets/szarp.jpg";
+import szarpMobile from "../../assets/szarp_mobile.jpg";
+import marek from "../../assets/marek.jpg";
+import marekMobile from "../../assets/marek_mobile.jpg";
+import gandi from "../../assets/gandi.jpg";
+import gandiMobile from "../../assets/gandi_mobile.jpg";
 
 import { styled, alpha } from "@mui/material/styles";
 
