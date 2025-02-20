@@ -59,7 +59,13 @@ export default function FAQ() {
             <Typography
               component="h3"
               variant="subtitle1"
-              sx={{ typography: { sm: "subtitle1", xs: "subtitle2" } }}
+              sx={{
+                typography: {
+                  sm: "subtitle1",
+                  xs: "subtitle2",
+                  textAlign: "left"
+                }
+              }}
             >
               Czy jeśli kupuje bilet na LARP 'Przeprawa Królów' to muszę
               dodatkowo kupić bilet na konwent?

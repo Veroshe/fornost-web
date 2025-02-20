@@ -79,7 +79,7 @@ export default function Highlights() {
           }}
         >
           <Typography component="h2" variant="h2" gutterBottom>
-            Najwaniejsze informacje
+            Najważniejsze informacje
           </Typography>
         </Box>
         <Grid container spacing={2}>

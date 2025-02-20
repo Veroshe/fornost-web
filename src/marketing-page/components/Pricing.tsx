@@ -77,7 +77,7 @@ export default function Pricing() {
           gutterBottom
           sx={{ color: "text.primary" }}
         >
-          Gdzie nas znaleść
+          Gdzie nas znaleźć
         </Typography>
       </Box>
       <Grid
