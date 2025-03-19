@@ -11,12 +11,13 @@ import Current from "./pages/Current";
 import InProgress from "./marketing-page/InProgres";
 import Homepage from "./marketing-page/Homepage";
 import AppAppBar from "./marketing-page/components/AppAppBar";
+import Info from "./marketing-page/Info";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<AppAppBar />}>
       <Route index element={<Homepage />} />
-      <Route path="2025" element={<Current />} />
+      <Route path="info" element={<Info />} />
     </Route>
   )
 );

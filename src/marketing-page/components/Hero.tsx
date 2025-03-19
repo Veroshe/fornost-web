@@ -38,7 +38,7 @@ export default function Hero() {
         backgroundRepeat: "no-repeat"
       })}
     >
-      <Container
+      {/* <Container
         sx={{
           display: "flex",
           flexDirection: "column",
@@ -48,14 +48,15 @@ export default function Hero() {
           pt: { xs: 8, sm: 12 },
           pb: { xs: 8, sm: 12 }
         }}
-      >
-        <Stack
+      > */}
+      <div className="hero-content"></div>
+      {/* <Stack
           spacing={2}
           useFlexGap
           sx={theme => ({
             alignItems: "center",
             width: { xs: "100%", sm: "70%" },
-            backgroundColor: alpha(theme.palette.background.default, 0.5),
+            backgroundColor: alpha(theme.palette.background.default, 1),
             boxShadow: theme.shadows[1],
             padding: theme.spacing(3),
             borderRadius: `calc(${theme.shape.borderRadius}px + 8px)`
@@ -70,17 +71,7 @@ export default function Hero() {
               fontSize: "clamp(3rem, 10vw, 3.5rem)"
             }}
           >
-            Fornost&nbsp;
-            <Typography
-              component="span"
-              variant="h1"
-              sx={theme => ({
-                fontSize: "inherit",
-                color: "primary.main"
-              })}
-            >
-              2025
-            </Typography>
+            26.07 - 02.05.2025
           </Typography>
           <Typography variant="h6">
             Fornost to tygodniowy, terenowy konwent dla miłośników fantasy.
@@ -108,9 +99,9 @@ export default function Hero() {
               Dowiedz się więcej
             </Button>
           </Stack>
-        </Stack>
-        <StyledBox id="image" />
-      </Container>
+        </Stack> */}
+      {/* <StyledBox id="image" /> */}
+      {/* </Container> */}
     </Box>
   );
 }

@@ -10,6 +10,8 @@ import Footer from "./components/Footer";
 export default function Homepage() {
   return (
     <>
+      <div className="back-top"></div>
+      <div className="back"></div>
       <Hero />
       <div>
         <Highlights />

@@ -59,7 +59,7 @@ export default function Pricing() {
         flexDirection: "column",
         alignItems: "center",
         gap: { xs: 3, sm: 6 },
-        backgroundColor: alpha(theme.palette.background.default, 0.5),
+        backgroundColor: alpha(theme.palette.background.default, 0.7),
         boxShadow: theme.shadows[1],
 
         borderRadius: `calc(${theme.shape.borderRadius}px + 8px)`

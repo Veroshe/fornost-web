@@ -27,12 +27,40 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
-  /* background: rgb(161, 171, 82);
-    background: linear-gradient(180deg, rgba(161, 171, 82, 1) 29%, rgba(116, 124, 60, 1) 51%, rgba(64, 52, 38, 1) 100%); */
-  background-image: url("../src/assets/test.jpg");
-      background-position: top;
-        background-size: contain;
-        background-repeat: repeat-y;
+  background-color: unset !important;
+}
+
+.back-top {
+  background-image: url("../src/assets/smol-olca.jpg");
+    background-position: top;
+    background-size: cover;
+        width: 100%;
+          height: 100vh;
+          position: absolute;
+          left: 0;
+          top: 0;
+          z-index: -1;
+          box-shadow: #4C4230 0px 4px 16px 0px, #4C4230 0px 8px 16px -5px;
+}
+.back {
+background-image: url("../src/assets/mapka.jpg");
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+    width: 100%;
+          height: 100vh;
+            position: fixed;
+      left: 0;
+      top: 0;
+      right:0;
+      z-index: -2;
+
+}
+
+.hero-content {
+  background-image: url("../src/assets/napis.png");
+      width: 100%;
+        height: 100vh;
 }
 
 h1 {

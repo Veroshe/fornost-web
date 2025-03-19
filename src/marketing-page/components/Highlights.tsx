@@ -7,6 +7,7 @@ import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
 import Link from "@mui/material/Link";
 import Button from "@mui/material/Button";
+
 import AutoFixHighRoundedIcon from "@mui/icons-material/AutoFixHighRounded";
 import ConstructionRoundedIcon from "@mui/icons-material/ConstructionRounded";
 import QueryStatsRoundedIcon from "@mui/icons-material/QueryStatsRounded";
@@ -23,7 +24,7 @@ import { styled, alpha } from "@mui/material/styles";
 
 const StyledBox = styled(Box)(({ theme }) => ({
   borderRadius: `calc(${theme.shape.borderRadius}px + 8px)`,
-  backgroundColor: alpha(theme.palette.background.default, 0.5),
+  backgroundColor: alpha(theme.palette.background.default, 0.7),
   boxShadow: theme.shadows[1],
   padding: theme.spacing(3)
 }));
@@ -72,16 +73,6 @@ export default function Highlights() {
           gap: { xs: 3, sm: 6 }
         }}
       >
-        <Box
-          sx={{
-            width: { sm: "100%", md: "60%" },
-            textAlign: { sm: "left", md: "center" }
-          }}
-        >
-          <Typography component="h2" variant="h2" gutterBottom>
-            Najważniejsze informacje
-          </Typography>
-        </Box>
         <Grid container spacing={2}>
           <Grid size={{ xs: 12, sm: 6, md: 4 }}>
             <Stack
@@ -94,36 +85,33 @@ export default function Highlights() {
                 height: "100%",
                 borderColor: "hsla(220, 25%, 25%, 0.3)",
                 backgroundColor: "background.default",
-                alignItems: "flex-start"
+                alignItems: "center"
               }}
             >
-              <Box sx={{ opacity: "50%" }}>
-                <PinDropIcon />
-              </Box>
               <div>
                 <Typography
                   gutterBottom
-                  sx={{ fontWeight: "bold", textAlign: "left" }}
+                  sx={{ fontWeight: "bold", textAlign: "center" }}
                   variant="h6"
                 >
-                  Gdzie
+                  Co, gdzie i kiedy
                 </Typography>
 
                 <Typography
                   variant="body1"
                   sx={{
                     color: "grey.900",
-                    textAlign: "left",
+                    textAlign: "center",
                     whiteSpace: "pre-line"
                   }}
                 >
-                  <b>26.07 - 03.08.2025</b> we wsi{" "}
-                  <Link href="https://maps.app.goo.gl/h2fYT5WwmHKT4QCg7">
-                    Czatachowa, woj. śląskie
-                  </Link>
-                  , położonej na Jurze Krakowsko-Częstochowskiej.
-                  <br />
-                  Teren Fornostu (pole namiotowe), znajduje się na samym końcu
+                  <p>26.07 - 03.08.2025</p>
+                  <p>
+                    <Link href="https://maps.app.goo.gl/h2fYT5WwmHKT4QCg7">
+                      Czatachowa
+                    </Link>
+                  </p>
+                  Teren Fornostu (pole namiotowe) znajduje się na samym końcu
                   jednej z dwóch dróg w miejscowości.
                 </Typography>
               </div>
@@ -140,79 +128,42 @@ export default function Highlights() {
                 height: "100%",
                 borderColor: "hsla(220, 25%, 25%, 0.3)",
                 backgroundColor: "background.default",
-                alignItems: "flex-start"
+                alignItems: "center"
               }}
             >
-              <Box sx={{ opacity: "50%" }}>
-                <LocalActivityIcon />
-              </Box>
-              <div>
-                <Typography
-                  gutterBottom
-                  sx={{ fontWeight: "bold", textAlign: "left" }}
-                  variant="h6"
-                >
-                  Bilety
-                </Typography>
+              <Typography
+                gutterBottom
+                sx={{ fontWeight: "bold", textAlign: "center" }}
+                variant="h6"
+              >
+                Bilety
+              </Typography>
 
-                <Typography
-                  variant="body1"
-                  sx={{
-                    color: "grey.900",
-                    fontWeight: "bold",
-                    textAlign: "left"
-                  }}
-                >
-                  Przedsprzedaż II (07.01.2025 - 25.07.2025)
-                </Typography>
-                <Typography
-                  variant="body1"
-                  sx={{ color: "grey.900", textAlign: "left" }}
-                >
-                  bilet normalny: 550zł
-                </Typography>
-                <Typography
-                  variant="body1"
-                  sx={{ color: "grey.900", textAlign: "left" }}
-                >
-                  bilet dla studenta/ucznia/doktoranta: 500zł
-                </Typography>
-                <Typography
-                  variant="body1"
-                  sx={{
-                    color: "grey.900",
-                    fontWeight: "bold",
-                    textAlign: "left"
-                  }}
-                >
-                  Na konwencie
-                </Typography>
-                <Typography
-                  variant="body1"
-                  sx={{ color: "grey.900", textAlign: "left" }}
-                >
-                  bilet normalny: 700zł
-                </Typography>
-                <Typography
-                  variant="body1"
-                  sx={{ color: "grey.900", textAlign: "left" }}
-                >
-                  bilet dla studenta/ucznia/doktoranta: 650zł
-                </Typography>
+              <Typography
+                variant="body1"
+                sx={{ color: "grey.900", textAlign: "center" }}
+              >
+                bilet normalny - 550zł
+              </Typography>
+              <Typography
+                variant="body1"
+                sx={{ color: "grey.900", textAlign: "center" }}
+              >
+                bilet studencki - 500zł
+              </Typography>
 
-                <Link href="https://forms.gle/QvSuBcXhJ8sQhdYq6">
-                  <Button
-                    variant="contained"
-                    color="primary"
-                    size="large"
-                    sx={{ minWidth: "fit-content", marginTop: 2 }}
-                    href="https://forms.gle/HNEsudkPU7hbJMQVA"
-                    target="_blank"
-                  >
-                    Kup bilet
-                  </Button>
-                </Link>
-              </div>
+              <Link href="https://forms.gle/QvSuBcXhJ8sQhdYq6">
+                <Button
+                  variant="contained"
+                  color="primary"
+                  size="large"
+                  sx={{ minWidth: "fit-content", marginTop: 2 }}
+                  href="https://forms.gle/HNEsudkPU7hbJMQVA"
+                  target="_blank"
+                >
+                  Kup bilet
+                </Button>
+              </Link>
             </Stack>
           </Grid>
 
@@ -228,36 +179,33 @@ export default function Highlights() {
                   height: "100%",
                   borderColor: "hsla(220, 25%, 25%, 0.3)",
                   backgroundColor: "background.default",
-                  alignItems: "flex-start"
+                  alignItems: "center"
                 }}
               >
-                <Box sx={{ opacity: "50%" }}>{item.icon}</Box>
-                <div>
-                  <Typography
-                    gutterBottom
-                    sx={{ fontWeight: "bold", textAlign: "left" }}
-                    variant="h6"
-                  >
-                    {item.title}
-                  </Typography>
+                <Typography
+                  gutterBottom
+                  sx={{ fontWeight: "bold", textAlign: "center" }}
+                  variant="h6"
+                >
+                  {item.title}
+                </Typography>
 
-                  {item.type === "link" ? (
-                    <Link href="https://maps.app.goo.gl/h2fYT5WwmHKT4QCg7">
-                      {item.description}
-                    </Link>
-                  ) : (
-                    <Typography
-                      variant="body1"
-                      sx={{
-                        color: "grey.900",
-                        textAlign: "left",
-                        whiteSpace: "pre-line"
-                      }}
-                    >
-                      {item.description}
-                    </Typography>
-                  )}
-                </div>
+                {item.type === "link" ? (
+                  <Link href="https://maps.app.goo.gl/h2fYT5WwmHKT4QCg7">
+                    {item.description}
+                  </Link>
+                ) : (
+                  <Typography
+                    variant="body1"
+                    sx={{
+                      color: "grey.900",
+                      textAlign: "center",
+                      whiteSpace: "pre-line"
+                    }}
+                  >
+                    {item.description}
+                  </Typography>
+                )}
               </Stack>
             </Grid>
           ))}

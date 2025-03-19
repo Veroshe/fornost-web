@@ -27,7 +27,7 @@ export default function FAQ() {
       sx={theme => ({
         alignItems: "center",
         width: "100%",
-        backgroundColor: alpha(theme.palette.background.default, 0.5),
+        backgroundColor: alpha(theme.palette.background.default, 0.7),
         boxShadow: theme.shadows[1],
         padding: theme.spacing(3),
         borderRadius: `calc(${theme.shape.borderRadius}px + 8px)`,

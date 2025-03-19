@@ -30,6 +30,10 @@ const defaultTheme = createTheme();
 
 const customShadows: Shadows = [...defaultTheme.shadows];
 
+export const violet = {
+  500: "524261"
+};
+
 export const brand = {
   50: "#f8f9e9",
   100: "#edefc8",
@@ -131,9 +135,12 @@ export const getDesignTokens = () => {
       grey: {
         ...gray
       },
+      violet: {
+        ...violet
+      },
       divider: alpha(gray[300], 0.4),
       background: {
-        default: "hsl(0, 0%, 99%)",
+        default: "#EEDDD0",
         paper: "hsl(220, 35%, 97%)"
       },
       text: {
@@ -233,9 +240,12 @@ export const palette = {
   grey: {
     ...gray
   },
+  violet: {
+    ...violet
+  },
   divider: alpha(gray[900], 0.4),
   background: {
-    default: "#b8bb57",
+    default: "#EEDDD0",
     paper: "hsl(220, 35%, 97%)"
   },
   text: {
@@ -251,7 +261,7 @@ export const palette = {
 };
 
 export const typography = {
-  fontFamily: "Open Sans, sans-serif",
+  fontFamily: "Lato, sans-serif",
   h1: {
     fontSize: defaultTheme.typography.pxToRem(48),
     fontWeight: 600,
