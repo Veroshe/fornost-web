@@ -7,7 +7,7 @@ import { toggleButtonClasses } from "@mui/material/ToggleButton";
 import CheckBoxOutlineBlankRoundedIcon from "@mui/icons-material/CheckBoxOutlineBlankRounded";
 import CheckRoundedIcon from "@mui/icons-material/CheckRounded";
 import RemoveRoundedIcon from "@mui/icons-material/RemoveRounded";
-import { gray, brand, violet } from "../themePrimitives";
+import { gray, brand } from "../themePrimitives";
 
 /* eslint-disable import/prefer-default-export */
 export const inputsCustomizations: Components<Theme> = {
@@ -58,7 +58,7 @@ export const inputsCustomizations: Components<Theme> = {
             },
             style: {
               color: "white",
-              backgroundColor: violet[500],
+              backgroundColor: gray[900],
               backgroundImage: `linear-gradient(to bottom, ${gray[700]}, ${gray[800]})`,
               boxShadow: `inset 0 1px 0 ${gray[600]}, inset 0 -1px 0 1px hsl(220, 0%, 0%)`,
               border: `1px solid ${gray[700]}`,
@@ -73,7 +73,7 @@ export const inputsCustomizations: Components<Theme> = {
               ...theme.applyStyles("dark", {
                 color: "black",
                 backgroundColor: gray[50],
-                backgroundImage: `linear-gradient(to bottom, ${violet[500]}, ${violet[500]})`,
+                backgroundImage: `linear-gradient(to bottom, ${gray[100]}, ${gray[50]})`,
                 boxShadow: "inset 0 -1px 0  hsl(220, 30%, 80%)",
                 border: `1px solid ${gray[50]}`,
                 "&:hover": {
