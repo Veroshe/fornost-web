@@ -96,8 +96,7 @@ export const red = {
 };
 
 export const getDesignTokens = () => {
-  customShadows[1] =
-    "hsla(220, 30%, 5%, 0.07) 0px 4px 16px 0px, hsla(220, 25%, 10%, 0.07) 0px 8px 16px -5px";
+  customShadows[1] = "#4F3017 0px 4px 16px 0px, #201309 0px 8px 16px -5px";
 
   return {
     palette: {
@@ -131,7 +130,7 @@ export const getDesignTokens = () => {
       grey: {
         ...gray
       },
-      divider: alpha(gray[300], 0.4),
+      divider: "#4F3017",
       background: {
         default: "#EEDDD0",
         paper: "hsl(220, 35%, 97%)"
@@ -142,8 +141,8 @@ export const getDesignTokens = () => {
         warning: orange[400]
       },
       action: {
-        hover: alpha(gray[200], 0.2),
-        selected: `${alpha(gray[200], 0.3)}`
+        hover: alpha("#4C4230", 0.5),
+        selected: `${alpha("#4C4230", 0.5)}`
       }
     },
     typography: {
@@ -244,8 +243,8 @@ export const palette = {
     warning: orange[400]
   },
   action: {
-    hover: alpha(gray[200], 0.4),
-    selected: `${alpha(gray[200], 0.4)}`
+    hover: alpha("#4C4230", 0.5),
+    selected: `${alpha("#4C4230", 0.5)}`
   },
   baseShadow: "#4C4230 0px 4px 16px 0px, #4C4230 0px 8px 16px -5px"
 };
