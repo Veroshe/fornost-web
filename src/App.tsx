@@ -12,12 +12,14 @@ import InProgress from "./marketing-page/InProgres";
 import Homepage from "./marketing-page/Homepage";
 import AppAppBar from "./marketing-page/components/AppAppBar";
 import Info from "./marketing-page/Info";
+import About from "./marketing-page/About";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<AppAppBar />}>
       <Route index element={<Homepage />} />
       <Route path="info" element={<Info />} />
+      <Route path="about" element={<About />} />
     </Route>
   )
 );

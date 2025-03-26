@@ -111,7 +111,8 @@ export function MobileLayout({
             height: "100%",
             width: "100%",
             "&:hover": {
-              backgroundColor: (theme.vars || theme).palette.action.hover
+              backgroundColor: (theme.vars || theme).palette.action.hover,
+              color: alpha(theme.palette.background.default, 1)
             },
             borderColor: (theme.vars || theme).palette.divider,
             backgroundColor: alpha(theme.palette.background.default, 0.8),
@@ -172,26 +173,12 @@ export default function Features() {
       sx={theme => ({
         alignItems: "center",
         width: "100%",
-        backgroundColor: alpha(theme.palette.background.default, 0.7),
-        boxShadow: theme.shadows[1],
         padding: theme.spacing(3),
         borderRadius: `calc(${theme.shape.borderRadius}px + 8px)`,
         mt: { xs: 4, sm: 12 },
         mb: { xs: 8, sm: 16 }
       })}
     >
-      <Box
-        sx={{
-          width: { sm: "100%" },
-          textAlign: { sm: "left", md: "center" },
-          mt: 2
-        }}
-      >
-        <Typography component="h2" variant="h2" gutterBottom>
-          Atrakcje konwentu
-        </Typography>
-      </Box>
-
       <Box
         sx={{
           display: "flex",
@@ -222,7 +209,8 @@ export default function Features() {
                       width: "100%",
                       "&:hover": {
                         backgroundColor: (theme.vars || theme).palette.action
-                          .hover
+                          .hover,
+                        color: alpha(theme.palette.background.default, 1)
                       },
                       borderColor: (theme.vars || theme).palette.divider,
                       backgroundColor: alpha(
@@ -233,7 +221,8 @@ export default function Features() {
                       transition: "background-color 700ms linear"
                     }),
                     selectedItemIndex === index && {
-                      backgroundColor: "action.selected"
+                      backgroundColor: "action.selected",
+                      color: "#EEDDD0"
                     }
                   ]}
                 >
@@ -246,11 +235,7 @@ export default function Features() {
                         alignItems: "left",
                         gap: 1,
                         textAlign: "left",
-                        textTransform: "none",
-                        color: "text.secondary"
-                      },
-                      selectedItemIndex === index && {
-                        color: "text.primary"
+                        textTransform: "none"
                       }
                     ]}
                   >

@@ -39,7 +39,7 @@ export const brand = {
   500: "#c6cc5e",
   600: "#b8bb57",
   700: "#a7a550",
-  800: "#948f4a",
+  800: "#4A5426",
   900: "#746b41"
 };
 
@@ -113,9 +113,9 @@ export const getDesignTokens = () => {
         contrastText: gray[50]
       },
       warning: {
-        light: orange[300],
-        main: orange[400],
-        dark: orange[800]
+        light: brand[800],
+        main: brand[800],
+        dark: brand[800]
       },
       error: {
         light: red[300],
@@ -141,8 +141,8 @@ export const getDesignTokens = () => {
         warning: orange[400]
       },
       action: {
-        hover: alpha("#4C4230", 0.5),
-        selected: `${alpha("#4C4230", 0.5)}`
+        hover: alpha("#4C4230", 0.7),
+        selected: `${alpha("#4C4230", 0.7)}`
       }
     },
     typography: {
@@ -215,9 +215,9 @@ export const palette = {
     contrastText: gray[50]
   },
   warning: {
-    light: orange[300],
-    main: orange[400],
-    dark: orange[800]
+    light: brand[800],
+    main: brand[800],
+    dark: brand[800]
   },
   error: {
     light: red[300],
@@ -243,8 +243,8 @@ export const palette = {
     warning: orange[400]
   },
   action: {
-    hover: alpha("#4C4230", 0.5),
-    selected: `${alpha("#4C4230", 0.5)}`
+    hover: alpha("#4C4230", 0.7),
+    selected: `${alpha("#4C4230", 0.7)}`
   },
   baseShadow: "#4C4230 0px 4px 16px 0px, #4C4230 0px 8px 16px -5px"
 };

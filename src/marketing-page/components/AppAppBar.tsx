@@ -47,7 +47,7 @@ export default function AppAppBar() {
           // mt: "calc(var(--template-frame-height, 0px) + 28px)"
         }}
       >
-        <Container maxWidth="lg">
+        <Container>
           <StyledToolbar disableGutters>
             <Box
               sx={{
@@ -58,13 +58,20 @@ export default function AppAppBar() {
                 justifyContent: "space-between"
               }}
             >
-              <img src={logo} alt="Logo" style={{ height: 32 }} />
-              <Box sx={{ display: { xs: "none", md: "flex" } }}>
+              <Link to="/">
+                <img src={logo} alt="Logo" style={{ height: 32 }} />
+              </Link>
+              <Box sx={{ display: { xs: "none", md: "flex", gap: "1rem" } }}>
+                <Link to="/info">
+                  <Button variant="outlined" color="error" size="large">
+                    Najważniejsze Informacje
+                  </Button>
+                </Link>
                 <Button
-                  variant="text"
+                  variant="outlined"
                   color="error"
                   size="large"
-                  href=" https://www.facebook.com/events/895237192729983"
+                  href="https://www.facebook.com/events/895237192729983"
                   target="_blank"
                 >
                   Przeprawa królów
@@ -110,7 +117,10 @@ export default function AppAppBar() {
                     </IconButton>
                   </Box>
 
-                  {/* <Link to="/2025"> */}
+                  <Link to="/2025">
+                    <MenuItem>Najważniejsze Informacje</MenuItem>
+                  </Link>
+
                   <MenuItem
                     href=" https://www.facebook.com/events/895237192729983"
                     target="_blank"
@@ -118,7 +128,7 @@ export default function AppAppBar() {
                   >
                     Przeprawa królów
                   </MenuItem>
-                  {/* </Link> */}
+
                   {/* <MenuItem>Testimonials</MenuItem>
                   <MenuItem>Highlights</MenuItem>
                   <MenuItem>Pricing</MenuItem>

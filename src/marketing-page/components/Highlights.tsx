@@ -61,7 +61,7 @@ export default function Highlights() {
       id="highlights"
       sx={{
         pt: { xs: 4, sm: 8 },
-        pb: { xs: 8, sm: 16 }
+        pb: { xs: 8, sm: 8 }
       }}
     >
       <Container
@@ -152,18 +152,16 @@ export default function Highlights() {
                 bilet studencki - 500zł
               </Typography>
 
-              <Link href="https://forms.gle/QvSuBcXhJ8sQhdYq6">
-                <Button
-                  variant="contained"
-                  color="primary"
-                  size="large"
-                  sx={{ minWidth: "fit-content", marginTop: 2 }}
-                  href="https://forms.gle/HNEsudkPU7hbJMQVA"
-                  target="_blank"
-                >
-                  Kup bilet
-                </Button>
-              </Link>
+              <Button
+                variant="contained"
+                color="primary"
+                size="large"
+                sx={{ minWidth: "fit-content", marginTop: 2 }}
+                href="https://forms.gle/HNEsudkPU7hbJMQVA"
+                target="_blank"
+              >
+                Kup bilet
+              </Button>
             </Stack>
           </Grid>
 
@@ -210,6 +208,17 @@ export default function Highlights() {
             </Grid>
           ))}
         </Grid>
+
+        <Button
+          variant="contained"
+          color="primary"
+          size="large"
+          sx={{ minWidth: "fit-content", marginTop: 2 }}
+          href="https://forms.gle/HNEsudkPU7hbJMQVA"
+          target="_blank"
+        >
+          Dowiedz się więcej
+        </Button>
       </Container>
     </StyledBox>
   );
