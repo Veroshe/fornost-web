@@ -9,6 +9,7 @@ import Container from "@mui/material/Container";
 import Divider from "@mui/material/Divider";
 import Grid from "@mui/material/Grid2";
 import Typography from "@mui/material/Typography";
+import Stack from "@mui/material/Stack";
 import { Link } from "@mui/material";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
@@ -74,60 +75,58 @@ export default function Pricing() {
           Gdzie nas znaleźć
         </Typography>
       </Box>
-      <Grid
-        container
-        spacing={3}
-        sx={{ alignItems: "center", justifyContent: "center", width: "100%" }}
+
+      <Stack
+        direction="row"
+        spacing={2}
+        justifyContent={"center"}
+        alignItems={"center"}
       >
         {tiers.map(tier => (
-          <Grid size={{ xs: 12, sm: 6, md: 4 }} key={tier.title}>
-            <Link
-              href={tier.link}
-              target="_blank"
-              sx={{ textDecoration: "none" }}
+          <Link
+            href={tier.link}
+            target="_blank"
+            sx={{ textDecoration: "none" }}
+          >
+            <Card
+              className="withHover"
+              sx={[
+                theme => ({
+                  p: 2,
+                  display: "flex",
+                  flexDirection: "column",
+                  flex: 1,
+                  backgroundColor: "background.default",
+                  boxShadow: "baseShadow",
+                  "&:hover": {
+                    backgroundColor: (theme.vars || theme).palette.action.hover,
+                    color: alpha(theme.palette.background.default, 1)
+                  }
+                })
+              ]}
             >
-              <Card
-                className="withHover"
-                sx={[
-                  theme => ({
-                    p: 2,
-                    display: "flex",
-                    flexDirection: "column",
-                    gap: 4,
-                    backgroundColor: "background.default",
-                    boxShadow: "baseShadow",
-                    "&:hover": {
-                      backgroundColor: (theme.vars || theme).palette.action
-                        .hover
+              <CardContent>
+                <Box
+                  sx={[
+                    {
+                      mb: 1,
+                      display: "flex",
+                      justifyContent: "center",
+                      alignItems: "center",
+                      gap: 2,
+                      opacity: "50%"
                     }
-                  })
-                ]}
-              >
-                <CardContent>
-                  <Box
-                    sx={[
-                      {
-                        mb: 1,
-                        display: "flex",
-                        justifyContent: "center",
-                        alignItems: "center",
-                        gap: 2,
-                        opacity: "50%"
-                      }
-                    ]}
-                  >
-                    {tier.icon}
-                  </Box>
+                  ]}
+                >
+                  {tier.icon}
+                </Box>
 
-                  <Typography variant="body1" sx={{ color: "grey.900" }}>
-                    {tier.text}
-                  </Typography>
-                </CardContent>
-              </Card>
-            </Link>
-          </Grid>
+                <Typography variant="body1">{tier.text}</Typography>
+              </CardContent>
+            </Card>
+          </Link>
         ))}
-      </Grid>
+      </Stack>
     </Container>
   );
 }
