@@ -7,6 +7,7 @@ import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
 import Link from "@mui/material/Link";
 import Button from "@mui/material/Button";
+import { Link as LinkRouter } from "react-router-dom";
 
 import AutoFixHighRoundedIcon from "@mui/icons-material/AutoFixHighRounded";
 import ConstructionRoundedIcon from "@mui/icons-material/ConstructionRounded";
@@ -209,16 +210,16 @@ export default function Highlights() {
           ))}
         </Grid>
 
-        <Button
-          variant="contained"
-          color="primary"
-          size="large"
-          sx={{ minWidth: "fit-content", marginTop: 2 }}
-          href="https://forms.gle/HNEsudkPU7hbJMQVA"
-          target="_blank"
-        >
-          Dowiedz się więcej
-        </Button>
+        <LinkRouter to="/info">
+          <Button
+            variant="contained"
+            color="primary"
+            size="large"
+            sx={{ minWidth: "fit-content", marginTop: 2 }}
+          >
+            Dowiedz się więcej
+          </Button>
+        </LinkRouter>
       </Container>
     </StyledBox>
   );

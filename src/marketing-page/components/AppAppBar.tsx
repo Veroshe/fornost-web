@@ -77,6 +77,17 @@ export default function AppAppBar() {
                   Przeprawa królów
                 </Button>
 
+                <Button
+                  variant="contained"
+                  color="primary"
+                  size="large"
+                  sx={{ minWidth: "fit-content" }}
+                  href="https://forms.gle/HNEsudkPU7hbJMQVA"
+                  target="_blank"
+                >
+                  Kup bilet
+                </Button>
+
                 {/* <Button variant="text" color="error" size="large">
                   Pierwszy raz
                 </Button>

@@ -3,7 +3,8 @@ import {
   Route,
   createBrowserRouter,
   createRoutesFromElements,
-  RouterProvider
+  RouterProvider,
+  createHashRouter
 } from "react-router-dom";
 import "./App.css";
 import AppTheme from "./shared-theme/AppTheme";
@@ -14,7 +15,7 @@ import AppAppBar from "./marketing-page/components/AppAppBar";
 import Info from "./marketing-page/Info";
 import About from "./marketing-page/About";
 
-const router = createBrowserRouter(
+const router = createHashRouter(
   createRoutesFromElements(
     <Route path="/" element={<AppAppBar />}>
       <Route index element={<Homepage />} />
