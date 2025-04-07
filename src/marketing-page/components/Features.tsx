@@ -183,7 +183,7 @@ export default function Features() {
       sx={theme => ({
         alignItems: "center",
         width: "100%",
-        padding: theme.spacing(3),
+        padding: { xs: 0, sm: theme.spacing(3) },
         borderRadius: `calc(${theme.shape.borderRadius}px + 8px)`,
         mt: { xs: 4, sm: 12 },
         mb: { xs: 8, sm: 16 }
