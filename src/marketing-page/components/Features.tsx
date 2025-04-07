@@ -92,7 +92,7 @@ export function MobileLayout({
         gap: 2
       }}
     >
-      <Box sx={{ display: "flex", gap: 2, overflow: "auto" }}>
+      <Box sx={{ display: "flex", gap: 2, overflow: "auto", flexWrap: "wrap" }}>
         {items.map(({ title }, index) => (
           <Chip
             size="medium"
@@ -100,6 +100,7 @@ export function MobileLayout({
             label={title}
             onClick={() => handleItemClick(index)}
             selected={selectedItemIndex === index}
+            className={selectedItemIndex === index ? "chipSelected" : ""}
           />
         ))}
       </Box>
@@ -129,16 +130,25 @@ export function MobileLayout({
             backgroundImage: items[selectedItemIndex].imageMobile
           })}
         />
-        <Box sx={{ px: 2, pb: 2 }}>
-          <Typography
-            gutterBottom
-            sx={{ color: "text.primary", fontWeight: "medium" }}
-          >
-            {selectedFeature.title}
-          </Typography>
-          <Typography variant="body2" sx={{ color: "text.secondary", mb: 1.5 }}>
-            {selectedFeature.description}
-          </Typography>
+        <Box
+          sx={[
+            {
+              width: "100%",
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "left",
+              textAlign: "left",
+              textTransform: "none"
+            }
+          ]}
+        >
+          <Typography variant="h6">{selectedFeature.title}</Typography>
+          <ul style={{ paddingLeft: "1.5em" }}>
+            <li>{selectedFeature.item1}</li>
+            <li>{selectedFeature.item2}</li>
+            <li>{selectedFeature.item3}</li>
+            {selectedFeature.item4 && <li>{selectedFeature.item4}</li>}
+          </ul>
         </Box>
       </Card>
     </Box>
@@ -152,18 +162,18 @@ export default function Features() {
     setSelectedItemIndex(index);
   };
 
-  useEffect(() => {
-    const interval = setInterval(
-      () =>
-        setSelectedItemIndex(selectedItemIndex =>
-          selectedItemIndex < 2 ? selectedItemIndex + 1 : 0
-        ),
-      5000
-    );
-    return () => {
-      clearInterval(interval);
-    };
-  }, []);
+  // useEffect(() => {
+  //   const interval = setInterval(
+  //     () =>
+  //       setSelectedItemIndex(selectedItemIndex =>
+  //         selectedItemIndex < 2 ? selectedItemIndex + 1 : 0
+  //       ),
+  //     5000
+  //   );
+  //   return () => {
+  //     clearInterval(interval);
+  //   };
+  // }, []);
 
   const selectedFeature = items[selectedItemIndex];
 

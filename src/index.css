@@ -100,6 +100,15 @@ li {
 }
 
 
+.chipSelected {
+  background-color: rgba(76,
+    66,
+    48, 0.7) !important;
+  color: #EEDDD0 !important;
+  background-image: none !important;
+}
+
+
 /* @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
