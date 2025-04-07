@@ -64,7 +64,7 @@ export default function AppAppBar() {
               <Box sx={{ display: { xs: "none", md: "flex", gap: "1rem" } }}>
                 <Link to="/info">
                   <Button variant="outlined" color="error" size="large">
-                    Najważniejsze Informacje
+                    Najważniejsze informacje
                   </Button>
                 </Link>
 
@@ -135,7 +135,7 @@ export default function AppAppBar() {
                   </Box>
 
                   <Link to="/info">
-                    <MenuItem>Najważniejsze Informacje</MenuItem>
+                    <MenuItem>Najważniejsze informacje</MenuItem>
                   </Link>
 
                   <Link to="/about">
