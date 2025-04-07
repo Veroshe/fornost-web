@@ -128,7 +128,7 @@ export default function AppAppBar() {
                     </IconButton>
                   </Box>
 
-                  <Link to="/2025">
+                  <Link to="/info">
                     <MenuItem>Najważniejsze Informacje</MenuItem>
                   </Link>
 
