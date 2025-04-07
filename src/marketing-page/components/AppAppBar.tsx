@@ -67,6 +67,12 @@ export default function AppAppBar() {
                     Najważniejsze Informacje
                   </Button>
                 </Link>
+
+                <Link to="/about">
+                  <Button variant="outlined" color="error" size="large">
+                    O konwencie
+                  </Button>
+                </Link>
                 <Button
                   variant="outlined"
                   color="error"
@@ -74,7 +80,7 @@ export default function AppAppBar() {
                   href="https://www.facebook.com/events/895237192729983"
                   target="_blank"
                 >
-                  Przeprawa królów
+                  Przeprawa Królów
                 </Button>
 
                 <Button
@@ -132,12 +138,16 @@ export default function AppAppBar() {
                     <MenuItem>Najważniejsze Informacje</MenuItem>
                   </Link>
 
+                  <Link to="/about">
+                    <MenuItem>O konwencie</MenuItem>
+                  </Link>
+
                   <MenuItem
                     href=" https://www.facebook.com/events/895237192729983"
                     target="_blank"
                     component="a"
                   >
-                    Przeprawa królów
+                    Przeprawa Królów
                   </MenuItem>
 
                   {/* <MenuItem>Testimonials</MenuItem>

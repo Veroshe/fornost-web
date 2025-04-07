@@ -124,13 +124,13 @@ export default function About() {
                 zaoferowania znacznie więcej atrakcji, niż widnieje w tabeli
                 programowej. Co wieczór odbywają się ogniska z gitarą,. Ponadto
                 okolica z jurajskimi skałami i szlakami turystycznymi jest
-                atrakcją samą w sobie. Najważniejszym punktem w programie
-                Fornostu jest Gra Główna – dwudniowy larp w Tolkienowskim
-                świecie Śródziemia. Jeśli wybierasz się na Fornost po raz
-                pierwszy i chcesz wziąć udział w LARPie, przeczytaj Podręcznik
-                Gracza i wypełnij formularz zgłoszeniowy, które znajdziesz na
-                stronie wydarzenia Gry Głównej na Facebooku.Wszelkie pytania
-                możesz również kierować do nas na{" "}
+                atrakcją samą w sobie. Największym punktem w programie Fornostu
+                jest Gra Główna – dwudniowy larp w tolkienowskim świecie
+                Śródziemia. Jeśli wybierasz się na Fornost po raz pierwszy i
+                chcesz wziąć udział w LARPie, przeczytaj Podręcznik Gracza i
+                wypełnij formularz zgłoszeniowy, które znajdziesz na stronie
+                wydarzenia Gry Głównej na Facebooku.Wszelkie pytania możesz
+                również kierować do nas na{" "}
                 <a href="https://discord.gg/P586NAPCxy" target="_blank">
                   Discordzie
                 </a>
@@ -138,7 +138,7 @@ export default function About() {
             </Stack>
           </Stack>
 
-          <Stack>
+          {/* <Stack>
             <Typography
               gutterBottom
               sx={{ fontWeight: "bold", textAlign: "left", marginTop: 2 }}
@@ -164,7 +164,7 @@ export default function About() {
                 Tekst o strojach
               </Typography>
             </Stack>
-          </Stack>
+          </Stack> */}
 
           <Stack>
             <Typography

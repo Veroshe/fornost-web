@@ -67,7 +67,7 @@ export default function FAQ() {
                 }
               }}
             >
-              Czy jeśli kupuje bilet na LARP 'Przeprawa Królów' to muszę
+              Czy jeśli kupuję bilet na LARP 'Przeprawa Królów' to muszę
               dodatkowo kupić bilet na konwent?
             </Typography>
           </AccordionSummary>
@@ -80,7 +80,7 @@ export default function FAQ() {
               }}
             >
               Nie, bilet na LARP 'Przeprawa Królów' zawiera w sobie bilet na
-              konwent na dni w których odbywa się LARP.
+              konwent na dni, w których odbywa się LARP.
             </Typography>
           </AccordionDetails>
         </Accordion>

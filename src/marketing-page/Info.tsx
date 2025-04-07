@@ -332,8 +332,8 @@ export default function Info() {
                   whiteSpace: "pre-line"
                 }}
               >
-                Najważniejszym punktem w programie Fornostu jest Gra Główna –
-                dwudniowy larp w Tolkienowskim świecie Śródziemia. Jeśli
+                Największym punktem w programie Fornostu jest Gra Główna –
+                dwudniowy larp w tolkienowskim świecie Śródziemia. Jeśli
                 wybierasz się na Fornost po raz pierwszy i chcesz wziąć udział w
                 LARPie, przeczytaj Podręcznik Gracza i wypełnij formularz
                 zgłoszeniowy, które znajdziesz na{" "}
@@ -419,8 +419,8 @@ export default function Info() {
                 pełnoletniego opiekuna, wskazanego na piśmie przez opiekunów
                 prawnych. Osoby niepełnoletnie, które skończyły 15 lat, podczas
                 akredytacji muszą przedłożyć zgodę rodziców (lub opiekunów
-                prawnych) na udział dziecka w Fornoście. Formularz zgody
-                możnapobrać z{" "}
+                prawnych) na udział dziecka w Fornoście. Formularz zgody można
+                pobrać z{" "}
                 <a
                   href="https://drive.google.com/file/d/10OVwLGKLCPoKyXGm_Gbva9wiB0CKkGSs/view"
                   target="_blank"
@@ -483,9 +483,9 @@ export default function Info() {
                 }}
               >
                 Pierwszy raz? Po dotarciu na miejscu konwentu znajdź osobę z
-                ekipy Organizacji, poznasz ich po czerwonej bandanie. Z chęcią
-                odpowiadają na wszelkie pytania i pomogą Ci odnaleźć się w
-                konwencie.
+                ekipy Organizacji, poznasz ich po czerwonej bandanie. Każdy
+                członek zespołu organizacyjnego z chęcią odpowie na wszelkie
+                pytania i pomoże Ci odnaleźć się na konwencie.
               </Typography>
             </Stack>
 

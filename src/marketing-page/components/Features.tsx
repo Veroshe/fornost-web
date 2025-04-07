@@ -28,7 +28,7 @@ const items = [
   {
     title: "LARPY i inne atrakcje",
     item1:
-      "LARPY terenowe i chambery (m.in. 'Pstyk!' - zwycięzca Larpowych Laurów 2024)",
+      "LARPY terenowe i chambery (m.in. 'Pstryk!' - zwycięzca Larpowych Laurów 2024)",
     item2: "Prelekcje i warsztaty",
     item3: "Turniej juggera",
     image: `url(${marek})`,
