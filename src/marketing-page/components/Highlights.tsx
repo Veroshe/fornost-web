@@ -42,17 +42,6 @@ const items = [
     title: "Dojazd",
     description:
       "Najbliższą miejscowością, do której dojeżdża pociąg oraz autobusy dalekobieżne jest Myszków. \n Z Myszkowa można dojechać busami do Żarek, skąd na miejsce imprezy jest około 6 kilometrów."
-  },
-  {
-    icon: <RestaurantMenuIcon />,
-    title: "Wyżywienie",
-    description: "Informacje wkrótce"
-  },
-  {
-    icon: <CalendarMonthIcon />,
-    title: "Program",
-    description: "Informacje wkrótce"
-    //type: "link"
   }
 ];
 
@@ -165,6 +154,87 @@ export default function Highlights() {
               </Button>
             </Stack>
           </Grid>
+          <Grid size={{ xs: 12, sm: 6, md: 4 }}>
+            <Stack
+              direction="column"
+              component={Card}
+              spacing={1}
+              useFlexGap
+              sx={{
+                p: 3,
+                height: "100%",
+                borderColor: "hsla(220, 25%, 25%, 0.3)",
+                backgroundColor: "background.default",
+                alignItems: "center"
+              }}
+            >
+              <Typography
+                gutterBottom
+                sx={{ fontWeight: "bold", textAlign: "center" }}
+                variant="h6"
+              >
+                Program
+              </Typography>
+
+              <Typography
+                variant="body1"
+                sx={{ color: "grey.900", textAlign: "center" }}
+              >
+                LARPY terenowe i chambery, warsztaty, prelekcje, konkursy,
+                planszówki
+              </Typography>
+
+              <Button
+                variant="contained"
+                color="primary"
+                size="large"
+                sx={{ minWidth: "fit-content", marginTop: 2 }}
+                href="https://drive.google.com/file/d/1DZ4xtYv2Rvam2ppKTZlffYZvwwq83NuV/view"
+                target="_blank"
+              >
+                Zobacz program
+              </Button>
+            </Stack>
+          </Grid>
+
+          <Grid size={{ xs: 12, sm: 6, md: 4 }}>
+            <Stack
+              direction="column"
+              component={Card}
+              spacing={1}
+              useFlexGap
+              sx={{
+                p: 3,
+                height: "100%",
+                borderColor: "hsla(220, 25%, 25%, 0.3)",
+                backgroundColor: "background.default",
+                alignItems: "center"
+              }}
+            >
+              <Typography
+                gutterBottom
+                sx={{ fontWeight: "bold", textAlign: "center" }}
+                variant="h6"
+              >
+                Wyżywienie
+              </Typography>
+
+              <Typography
+                variant="body1"
+                sx={{ color: "grey.900", textAlign: "center" }}
+              >
+                Catering od{" "}
+                <a
+                  href="https://www.przystanlesniow.pl/resturacja/restauracja"
+                  target="_blank"
+                >
+                  Przystani Leśniów
+                </a>
+                , oferujący śniadania, dania z grilla i (zamawiane dzień
+                wcześniej) zestawy obiadowe.
+              </Typography>
+            </Stack>
+          </Grid>
 
           {items.map((item, index) => (
             <Grid size={{ xs: 12, sm: 6, md: 4 }} key={index}>
@@ -189,22 +259,16 @@ export default function Highlights() {
                   {item.title}
                 </Typography>
 
-                {item.type === "link" ? (
-                  <Link href="https://maps.app.goo.gl/h2fYT5WwmHKT4QCg7">
-                    {item.description}
-                  </Link>
-                ) : (
-                  <Typography
-                    variant="body1"
-                    sx={{
-                      color: "grey.900",
-                      textAlign: "center",
-                      whiteSpace: "pre-line"
-                    }}
-                  >
-                    {item.description}
-                  </Typography>
-                )}
+                <Typography
+                  variant="body1"
+                  sx={{
+                    color: "grey.900",
+                    textAlign: "center",
+                    whiteSpace: "pre-line"
+                  }}
+                >
+                  {item.description}
+                </Typography>
               </Stack>
             </Grid>
           ))}

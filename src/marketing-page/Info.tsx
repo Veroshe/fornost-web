@@ -178,17 +178,17 @@ export default function Info() {
                   whiteSpace: "pre-line"
                 }}
               >
-                Na polu namiotowym obecny będzie namiot z cateringiem od
-                restauracji{" "}
+                Do dyspozycji wszystkich uczestników będzie catering od{" "}
                 <a
                   href="https://www.przystanlesniow.pl/resturacja/restauracja"
                   target="_blank"
                 >
-                  Przystań Leśniów
+                  Przystani Leśniów{" "}
                 </a>
-                , oferujący ciepłe posiłki (w tym śniadania), dania z grilla,
-                przekąski oraz kawę z ekspresu i zimne napoje (alkoholowe i
-                bezalkoholowe).
+                oferujący śniadania, dania z grilla i (zamawiane dzień
+                wcześniej) zestawy obiadowe. Oprócz posiłków, Przystań Leśniów
+                będzie mieć w swoim asortymencie ciepłe i zimne napoje (zarówno
+                alkoholowe, jak i bezalkoholowe) oraz przekąski.
               </Typography>
             </Stack>
 
