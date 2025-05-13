@@ -187,7 +187,7 @@ Please change the parent <Route path="${R}"> to <Route path="${R==="/"?"*":`${R}
  Orzechowski`,image:C3,text:"Logistyka, merch"},{name:`Aleksandra 'Olca'
  Gąsiorowska`,image:w3,text:"Social media, zachowanie ładu"},{name:`Martyna 'Tyna'
  Królak`,image:b3,text:"Grafika, oprawa wizualna"},{name:`Michał 'Nowy'
- Bąk`,image:x3,text:"Kontakty międzykonwentowe"},{name:`Bartosz 'Artysta'
+ Bąk`,image:x3,text:"Kontakty międzykonwentowe"},{name:`Bartek 'Artysta'
  Brózda`,image:j3,text:"Kontakty międzykonwentowe, osoba bezpieczeństwa"},{name:`Błażej
  Kardyś`,image:T3,text:"Wsparcie organizacyjne"},{name:`Filip 'Famos'
  Wróblewski`,image:y3,text:"Wsparcie organizacyjne, osoba bezpieczeństwa"},{name:`Ida 'Gin'
