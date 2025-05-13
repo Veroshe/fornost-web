@@ -73,6 +73,12 @@ export default function AppAppBar() {
                     O konwencie
                   </Button>
                 </Link>
+
+                <Link to="/org">
+                  <Button variant="outlined" color="error" size="large">
+                    Organizacja
+                  </Button>
+                </Link>
                 <Button
                   variant="outlined"
                   color="error"
@@ -140,6 +146,10 @@ export default function AppAppBar() {
 
                   <Link to="/about">
                     <MenuItem>O konwencie</MenuItem>
+                  </Link>
+
+                  <Link to="/org">
+                    <MenuItem>Organizacja</MenuItem>
                   </Link>
 
                   <MenuItem

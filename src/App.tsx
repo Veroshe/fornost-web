@@ -14,6 +14,7 @@ import Homepage from "./marketing-page/Homepage";
 import AppAppBar from "./marketing-page/components/AppAppBar";
 import Info from "./marketing-page/Info";
 import About from "./marketing-page/About";
+import Org from "./marketing-page/Org";
 
 const router = createHashRouter(
   createRoutesFromElements(
@@ -21,6 +22,7 @@ const router = createHashRouter(
       <Route index element={<Homepage />} />
       <Route path="info" element={<Info />} />
       <Route path="about" element={<About />} />
+      <Route path="org" element={<Org />} />
     </Route>
   )
 );

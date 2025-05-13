@@ -194,6 +194,17 @@ export default function Highlights() {
               >
                 Zobacz program
               </Button>
+
+              <Button
+                variant="outlined"
+                color="primary"
+                size="large"
+                sx={{ minWidth: "fit-content", marginTop: 2 }}
+                href="https://docs.google.com/document/d/1-rM8QECoRNhSxvteQn_1q4S8cLcwhznbxVlVMesgaw0/edit?tab=t.0#heading=h.9c21gb1fp29m"
+                target="_blank"
+              >
+                Opisy atrakcji
+              </Button>
             </Stack>
           </Grid>
 
