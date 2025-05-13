@@ -16,6 +16,7 @@ import wero from "../assets/org/wero.jpg";
 import ojo from "../assets/org/ojo.jpg";
 import ozlo from "../assets/org/ozlo.jpg";
 import rudy from "../assets/org/rudy.jpg";
+import blazej from "../assets/org/blazej.jpg";
 
 const ORGANIZACJA = [
   {
@@ -57,6 +58,11 @@ const ORGANIZACJA = [
     name: "Bartosz 'Artysta'\n Brózda",
     image: rudy,
     text: "Kontakty międzykonwentowe"
+  },
+  {
+    name: "Błażej\n Kardyś",
+    image: blazej,
+    text: "Wsparcie organizacyjne"
   },
   {
     name: "Filip 'Famos'\n Wróblewski",
