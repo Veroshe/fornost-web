@@ -55,7 +55,7 @@ const ORGANIZACJA = [
     text: "Kontakty międzykonwentowe"
   },
   {
-    name: "Bartosz 'Artysta'\n Brózda",
+    name: "Bartek 'Artysta'\n Brózda",
     image: rudy,
     text: "Kontakty międzykonwentowe, osoba bezpieczeństwa"
   },
