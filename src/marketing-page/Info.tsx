@@ -23,6 +23,7 @@ import FamilyRestroomIcon from "@mui/icons-material/FamilyRestroom";
 import BackpackIcon from "@mui/icons-material/Backpack";
 import InfoIcon from "@mui/icons-material/Info";
 import AssignmentIcon from "@mui/icons-material/Assignment";
+import WarningIcon from "@mui/icons-material/Warning";
 
 import { styled, alpha } from "@mui/material/styles";
 import { Pin } from "@mui/icons-material";
@@ -396,6 +397,29 @@ export default function Info() {
                 zdarzenia. W ekipie organizatorskiej znajduje się również osoba
                 po kursie pierwszej pomocy, mogąca udzielić pomocy w razie
                 potrzeby.
+              </Typography>
+            </Stack>
+
+            <Stack
+              direction="row"
+              spacing={1}
+              alignItems="left"
+              sx={{ marginTop: 2 }}
+            >
+              <WarningIcon color="warning" fontSize="small" />
+              <Typography
+                variant="body1"
+                sx={{
+                  color: "grey.900",
+                  textAlign: "left",
+                  whiteSpace: "pre-line"
+                }}
+              >
+                Osoby bezpieczeństwa - w razie sytuacji kryzysowej, w której
+                czujesz się zagrożony lub niekomfortowo, zgłoś się do jednej z
+                tych osób. Osobami bezpieczeństwa na edycji 2025 są - Małgorzata
+                Jakubowska, Ida 'Gin' Pacer, Bartosz 'Artysta' Brózda, Filip
+                'Famos' Wróblewski.
               </Typography>
             </Stack>
 

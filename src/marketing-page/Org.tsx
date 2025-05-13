@@ -27,7 +27,7 @@ const ORGANIZACJA = [
   {
     name: "Małgorzata\n Jakubowska",
     image: gosia,
-    text: "Program, oprawa muzyczna"
+    text: "Program, oprawa muzyczna, osoba bezpieczeństwa"
   },
   {
     name: "Julia 'Ponczo'\n Liszewska",
@@ -57,7 +57,7 @@ const ORGANIZACJA = [
   {
     name: "Bartosz 'Artysta'\n Brózda",
     image: rudy,
-    text: "Kontakty międzykonwentowe"
+    text: "Kontakty międzykonwentowe, osoba bezpieczeństwa"
   },
   {
     name: "Błażej\n Kardyś",
@@ -67,12 +67,12 @@ const ORGANIZACJA = [
   {
     name: "Filip 'Famos'\n Wróblewski",
     image: famos,
-    text: "Wsparcie organizacyjne"
+    text: "Wsparcie organizacyjne, osoba bezpieczeństwa"
   },
   {
     name: "Ida 'Gin'\n Pacer",
     image: gin,
-    text: "Wsparcie organizacyjne"
+    text: "Wsparcie organizacyjne, osoba bezpieczeństwa"
   },
   {
     name: "Mikołaj 'Ojo'\n Para",
@@ -125,7 +125,7 @@ export default function Org() {
             columns={{ xs: 4, sm: 8, md: 12 }}
           >
             {ORGANIZACJA.map((org, index) => (
-              <Grid key={index} size={{ xs: 2, sm: 3, md: 3 }}>
+              <Grid key={index} size={{ xs: 4, sm: 3, md: 3 }}>
                 <MediaCard image={org.image} name={org.name} text={org.text} />
               </Grid>
             ))}
