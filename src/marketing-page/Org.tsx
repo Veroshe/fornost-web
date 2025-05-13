@@ -16,7 +16,7 @@ import wero from "../assets/org/wero.jpg";
 import ojo from "../assets/org/ojo.jpg";
 import ozlo from "../assets/org/ozlo.jpg";
 import rudy from "../assets/org/rudy.jpg";
-import blazej from "../assets/org/blazej.jpg";
+import blazej from "../assets/org/blazej.png";
 
 const ORGANIZACJA = [
   {
