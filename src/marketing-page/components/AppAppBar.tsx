@@ -14,6 +14,7 @@ import CloseRoundedIcon from "@mui/icons-material/CloseRounded";
 import Sitemark from "./SitemarkIcon";
 import { Outlet, Link } from "react-router-dom";
 import logo from "../../assets/stare.png";
+import Menu from "@mui/material/Menu";
 
 const StyledToolbar = styled(Toolbar)(({ theme }) => ({
   display: "flex",
@@ -30,6 +31,15 @@ const StyledToolbar = styled(Toolbar)(({ theme }) => ({
 
 export default function AppAppBar() {
   const [open, setOpen] = React.useState(false);
+
+  const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
+  const openNested = Boolean(anchorEl);
+  const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
+    setAnchorEl(event.currentTarget);
+  };
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
 
   const toggleDrawer = (newOpen: boolean) => () => {
     setOpen(newOpen);
@@ -62,11 +72,39 @@ export default function AppAppBar() {
                 <img src={logo} alt="Logo" style={{ height: 32 }} />
               </Link>
               <Box sx={{ display: { xs: "none", md: "flex", gap: "1rem" } }}>
-                <Link to="/info">
-                  <Button variant="outlined" color="error" size="large">
-                    Najważniejsze informacje
-                  </Button>
-                </Link>
+                <Button
+                  variant="outlined"
+                  color="error"
+                  size="large"
+                  id="basic-button"
+                  aria-controls={openNested ? "basic-menu" : undefined}
+                  aria-haspopup="true"
+                  aria-expanded={openNested ? "true" : undefined}
+                  onClick={handleClick}
+                >
+                  Fornost 2025
+                </Button>
+
+                <Menu
+                  id="basic-menu"
+                  anchorEl={anchorEl}
+                  open={openNested}
+                  onClose={handleClose}
+                  MenuListProps={{
+                    "aria-labelledby": "basic-button"
+                  }}
+                >
+                  <MenuItem onClick={handleClose}>
+                    <Link to="/info">Najważniejsze informacje</Link>
+                  </MenuItem>
+                  <MenuItem onClick={handleClose}>
+                    <Link to="/merch">Merch</Link>
+                  </MenuItem>
+
+                  <MenuItem onClick={handleClose}>
+                    <Link to="/org">Organizacja</Link>
+                  </MenuItem>
+                </Menu>
 
                 <Link to="/about">
                   <Button variant="outlined" color="error" size="large">
@@ -74,11 +112,6 @@ export default function AppAppBar() {
                   </Button>
                 </Link>
 
-                <Link to="/org">
-                  <Button variant="outlined" color="error" size="large">
-                    Organizacja
-                  </Button>
-                </Link>
                 <Button
                   variant="outlined"
                   color="error"
@@ -99,19 +132,6 @@ export default function AppAppBar() {
                 >
                   Kup bilet
                 </Button>
-
-                {/* <Button variant="text" color="error" size="large">
-                  Pierwszy raz
-                </Button>
-                <Button variant="text" color="info" size="large">
-                  Program
-                </Button>
-                <Button variant="text" color="info" size="large">
-                  Gra Główna
-                </Button>
-                <Button variant="text" color="info" size="large">
-                  Artykuły
-                </Button> */}
               </Box>
             </Box>
             <Box sx={{ display: { xs: "flex", md: "none" }, gap: 1 }}>
@@ -142,6 +162,10 @@ export default function AppAppBar() {
 
                   <Link to="/info">
                     <MenuItem>Najważniejsze informacje</MenuItem>
+                  </Link>
+
+                  <Link to="/merch">
+                    <MenuItem>Merch</MenuItem>
                   </Link>
 
                   <Link to="/about">
