@@ -1,20 +1,17 @@
 import * as React from "react";
-import Box from "@mui/material/Box";
 import Card from "@mui/material/Card";
 import Container from "@mui/material/Container";
 import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
 import Link from "@mui/material/Link";
 import Button from "@mui/material/Button";
-import PinDropIcon from "@mui/icons-material/PinDrop";
-import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
-import FestivalIcon from "@mui/icons-material/Festival";
-import SportsBarIcon from "@mui/icons-material/SportsBar";
-import FlatwareIcon from "@mui/icons-material/Flatware";
 import CheckroomIcon from "@mui/icons-material/Checkroom";
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
-import { styled, alpha } from "@mui/material/styles";
-import { Pin } from "@mui/icons-material";
+import Box from "@mui/material/Box";
+import koszulka1 from "../assets/koszulka1.png";
+import bluza from "../assets/bluza.jpg";
+import koszulka2 from "../assets/koszulka2.png";
+import koszulka3 from "../assets/koszulka4-1.png";
 
 export default function Merch() {
   return (
@@ -36,61 +33,66 @@ export default function Merch() {
             marginTop: { xs: 4, sm: 6 }
           }}
         >
-          <Stack>
-            <Typography
-              variant="body1"
-              sx={{
-                color: "grey.900",
-                textAlign: "left",
-                whiteSpace: "pre-line"
-              }}
-            >
-              Wystartował formularz z przedsprzedażą drewnianych fornostowych
-              gadżetów. Wszystkie mogą być nieodłącznym partnerem na wielu
-              larpach, a środki uzyskane ze sprzedaży wykorzystamy na rozwój
-              naszego kochanego konwentu.
-            </Typography>
+          <Stack
+            direction="row"
+            spacing={2}
+            sx={{ display: { xs: "none", sm: "flex" } }}
+          >
+            <Box
+              sx={() => ({
+                m: "auto",
+                width: 420,
+                height: 170,
+                backgroundSize: "contain",
+                backgroundRepeat: "no-repeat",
+                transition: "background-image 700ms linear",
+                backgroundImage: `url(${koszulka1})`,
+                backgroundPosition: "center"
+              })}
+            />
+            <Box
+              sx={() => ({
+                m: "auto",
+                width: 420,
+                backgroundSize: "contain",
+                backgroundRepeat: "no-repeat",
+                transition: "background-image 700ms linear",
+                backgroundImage: `url(${koszulka2})`,
+                backgroundPosition: "center"
+              })}
+            />
+            <Box
+              sx={() => ({
+                m: "auto",
+                width: 420,
+                backgroundSize: "contain",
+                backgroundRepeat: "no-repeat",
+                transition: "background-image 700ms linear",
+                backgroundImage: `url(${koszulka3})`,
+                backgroundPosition: "center"
+              })}
+            />
+            <Box
+              sx={() => ({
+                m: "auto",
+                width: 420,
+                backgroundSize: "contain",
+                backgroundRepeat: "no-repeat",
+                transition: "background-image 700ms linear",
+                backgroundImage: `url(${bluza})`,
+                backgroundPosition: "center"
+              })}
+            />
           </Stack>
 
           <Stack>
-            <Stack
-              direction="row"
-              spacing={1}
-              alignItems="left"
-              sx={{ marginTop: 2 }}
+            <Typography
+              gutterBottom
+              sx={{ fontWeight: "bold", textAlign: "left" }}
+              variant="h6"
             >
-              <SportsBarIcon color="warning" fontSize="small" />
-              <Typography
-                variant="body1"
-                sx={{
-                  color: "grey.900",
-                  textAlign: "left",
-                  whiteSpace: "pre-line"
-                }}
-              >
-                Kufle powracają w nowej odsłonie! 🍺 Tym razem z wieczkiem.
-              </Typography>
-            </Stack>
-
-            <Stack
-              direction="row"
-              spacing={1}
-              alignItems="left"
-              sx={{ marginTop: 2 }}
-            >
-              <FlatwareIcon color="warning" fontSize="small" />
-              <Typography
-                variant="body1"
-                sx={{
-                  color: "grey.900",
-                  textAlign: "left",
-                  whiteSpace: "pre-line"
-                }}
-              >
-                Dodatkowo do gadżetów dołączają: drewniany zestaw złożony z
-                miski, widelca oraz łyżki.
-              </Typography>
-            </Stack>
+              Fornostowe koszulki i bluzy
+            </Typography>
 
             <Stack
               direction="row"
@@ -107,8 +109,13 @@ export default function Merch() {
                   whiteSpace: "pre-line"
                 }}
               >
-                Bez obaw! Koszulki i bluzy również wkrótce będą możliwe do
-                zamówienia.
+                Kochani Fornostowicze! Rzeczy na wyjazd nie mieszczą się w
+                jednej walizce? Przydała by się jeszcze jedna koszulka ale nie
+                masz siły po raz czwarty układać tetrisa ze szpeju larpowego??
+                Mamy dla was dobre wieści - nasza ekipa przygotowała dla was jak
+                co rok fornostowe koszulki, z odbiorem osobistym na konwencie!
+                Zachęcamy do składania zamówień, zarówno na koszulki jak i inne
+                dostępne gadżety.
               </Typography>
             </Stack>
 
@@ -127,12 +134,12 @@ export default function Merch() {
                   whiteSpace: "pre-line"
                 }}
               >
-                Zamówienia przyjmujemy do <b>12 czerwca 2025.</b>
+                Zamówienia przyjmujemy do <b>30 czerwca 2025.</b>
               </Typography>
             </Stack>
 
             <Link
-              href="https://forms.gle/8325YPtaAJQF1Mp26"
+              href="https://docs.google.com/forms/d/17BtvTPvXwUCWg3KCT-a32MjeW_3cj7VBDn7P6scI6rQ"
               alignSelf={"center"}
               target="_blank"
             >
@@ -142,7 +149,7 @@ export default function Merch() {
                 size="large"
                 sx={{ minWidth: "fit-content", marginTop: 2 }}
               >
-                Zamów merch
+                Zamów koszulki i bluzy
               </Button>
             </Link>
           </Stack>

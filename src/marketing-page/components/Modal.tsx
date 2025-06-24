@@ -14,10 +14,10 @@ import SportsBarIcon from "@mui/icons-material/SportsBar";
 import FlatwareIcon from "@mui/icons-material/Flatware";
 import CheckroomIcon from "@mui/icons-material/Checkroom";
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
-import kufel from "../../assets/kufel.png";
-import miska from "../../assets/miska.png";
-import widelec from "../../assets/widelec.png";
-import yzka from "../../assets/yzka.png";
+import koszulka1 from "../../assets/koszulka1.png";
+import bluza from "../../assets/bluza.jpg";
+import koszulka2 from "../../assets/koszulka2.png";
+import koszulka3 from "../../assets/koszulka4-1.png";
 import Box from "@mui/material/Box";
 
 const Backdrop = React.forwardRef<
@@ -85,7 +85,7 @@ export default function ModalFornost() {
                 backgroundSize: "contain",
                 backgroundRepeat: "no-repeat",
                 transition: "background-image 700ms linear",
-                backgroundImage: `url(${miska})`,
+                backgroundImage: `url(${koszulka1})`,
                 backgroundPosition: "center"
               })}
             />
@@ -98,7 +98,7 @@ export default function ModalFornost() {
                 backgroundRepeat: "no-repeat",
 
                 transition: "background-image 700ms linear",
-                backgroundImage: `url(${kufel})`,
+                backgroundImage: `url(${koszulka2})`,
                 backgroundPosition: "center"
               })}
             />
@@ -111,7 +111,7 @@ export default function ModalFornost() {
                 backgroundRepeat: "no-repeat",
 
                 transition: "background-image 700ms linear",
-                backgroundImage: `url(${yzka})`,
+                backgroundImage: `url(${koszulka3})`,
                 backgroundPosition: "center"
               })}
             />
@@ -124,7 +124,7 @@ export default function ModalFornost() {
                 backgroundRepeat: "no-repeat",
 
                 transition: "background-image 700ms linear",
-                backgroundImage: `url(${widelec})`,
+                backgroundImage: `url(${bluza})`,
                 backgroundPosition: "center"
               })}
             />
@@ -136,46 +136,8 @@ export default function ModalFornost() {
               sx={{ fontWeight: "bold", textAlign: "left" }}
               variant="h6"
             >
-              Fornostowy merch!
+              Fornostowe koszulki i bluzy
             </Typography>
-            <Stack
-              direction="row"
-              spacing={1}
-              alignItems="left"
-              sx={{ marginTop: 2 }}
-            >
-              <SportsBarIcon color="warning" fontSize="small" />
-              <Typography
-                variant="body1"
-                sx={{
-                  color: "grey.900",
-                  textAlign: "left",
-                  whiteSpace: "pre-line"
-                }}
-              >
-                Kufle powracają w nowej odsłonie! 🍺 Tym razem z wieczkiem.
-              </Typography>
-            </Stack>
-
-            <Stack
-              direction="row"
-              spacing={1}
-              alignItems="left"
-              sx={{ marginTop: 2 }}
-            >
-              <FlatwareIcon color="warning" fontSize="small" />
-              <Typography
-                variant="body1"
-                sx={{
-                  color: "grey.900",
-                  textAlign: "left",
-                  whiteSpace: "pre-line"
-                }}
-              >
-                Dodatkowo do gadżetów dołączają: drewniany zestaw złożony z
-                miski, widelca oraz łyżki.
-              </Typography>
-            </Stack>
 
             <Stack
               direction="row"
@@ -192,8 +154,13 @@ export default function ModalFornost() {
                   whiteSpace: "pre-line"
                 }}
               >
-                Bez obaw! Koszulki i bluzy również wkrótce będą możliwe do
-                zamówienia.
+                Kochani Fornostowicze! Rzeczy na wyjazd nie mieszczą się w
+                jednej walizce? Przydała by się jeszcze jedna koszulka ale nie
+                masz siły po raz czwarty układać tetrisa ze szpeju larpowego??
+                Mamy dla was dobre wieści - nasza ekipa przygotowała dla was jak
+                co roku fornostowe koszulki, z odbiorem osobistym na konwencie!
+                Zachęcamy do składania zamówień, zarówno na koszulki jak i inne
+                dostępne gadżety.
               </Typography>
             </Stack>
 
@@ -212,12 +179,12 @@ export default function ModalFornost() {
                   whiteSpace: "pre-line"
                 }}
               >
-                Zamówienia przyjmujemy do <b>12 czerwca 2025.</b>
+                Zamówienia przyjmujemy do <b>30 czerwca 2025.</b>
               </Typography>
             </Stack>
 
             <Link
-              href="https://forms.gle/8325YPtaAJQF1Mp26"
+              href="https://docs.google.com/forms/d/17BtvTPvXwUCWg3KCT-a32MjeW_3cj7VBDn7P6scI6rQ"
               alignSelf={"center"}
               target="_blank"
             >
@@ -227,7 +194,7 @@ export default function ModalFornost() {
                 size="large"
                 sx={{ minWidth: "fit-content", marginTop: 2 }}
               >
-                Zamów merch
+                Zamów koszulki i bluzy
               </Button>
             </Link>
           </Stack>
