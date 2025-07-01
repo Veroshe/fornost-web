@@ -1,19 +1,15 @@
 import * as React from "react";
 import clsx from "clsx";
-import { styled, css } from "@mui/system";
-import { Modal as BaseModal } from "@mui/material";
+import { styled } from "@mui/system";
 import Stack from "@mui/material/Stack";
-import DialogTitle from "@mui/material/DialogTitle";
 import Dialog from "@mui/material/Dialog";
-import Card from "@mui/material/Card";
-import Container from "@mui/material/Container";
 import Typography from "@mui/material/Typography";
 import Link from "@mui/material/Link";
 import Button from "@mui/material/Button";
-import SportsBarIcon from "@mui/icons-material/SportsBar";
-import FlatwareIcon from "@mui/icons-material/Flatware";
 import CheckroomIcon from "@mui/icons-material/Checkroom";
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
+import CloseIcon from "@mui/icons-material/Close";
+import IconButton from "@mui/material/IconButton";
 import koszulka1 from "../../assets/koszulka1.png";
 import bluza from "../../assets/bluza.jpg";
 import koszulka2 from "../../assets/koszulka2.png";
@@ -69,9 +65,23 @@ export default function ModalFornost() {
             borderColor: "hsla(220, 25%, 25%, 0.3)",
             backgroundColor: "background.default",
             alignItems: "left",
-            gap: 2
+            gap: 2,
+            position: "relative"
           }}
         >
+          <IconButton
+            onClick={handleClose}
+            sx={{
+              position: "absolute",
+              right: 8,
+              top: 8,
+              color: "grey.500"
+            }}
+            aria-label="close"
+          >
+            <CloseIcon />
+          </IconButton>
+
           <Stack
             direction="row"
             spacing={2}

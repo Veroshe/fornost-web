@@ -62,11 +62,13 @@ export const inputsCustomizations: Components<Theme> = {
               backgroundImage: `linear-gradient(to bottom, #4F3017, #4F3017)`,
               boxShadow: `none`,
               border: `1px solid #4F3017`,
+              transition: "all 0.3s cubic-bezier(0.4, 0, 0.2, 1)",
               "&:hover": {
                 backgroundImage: "none",
                 backgroundColor: " #201309",
-                boxShadow: "none",
-                color: "white"
+                color: "white",
+                transform: "translateY(-4px)",
+                boxShadow: theme.shadows[4]
               },
               "&:active": {
                 backgroundColor: "#201309"
@@ -114,6 +116,29 @@ export const inputsCustomizations: Components<Theme> = {
               },
               "&:active": {
                 borderColor: gray[500]
+              }
+            }
+          },
+          {
+            props: {
+              color: "primary",
+              variant: "outlined"
+            },
+            style: {
+              color: "#4F3017",
+              border: "1px solid",
+              borderColor: "#4F3017",
+              backgroundColor: alpha("#4F3017", 0.05),
+              transition: "all 0.3s cubic-bezier(0.4, 0, 0.2, 1)",
+              "&:hover": {
+                backgroundColor: alpha("#4F3017", 0.1),
+                borderColor: "#201309",
+                color: "#201309",
+                transform: "translateY(-4px)",
+                boxShadow: theme.shadows[4]
+              },
+              "&:active": {
+                backgroundColor: alpha("#4F3017", 0.15)
               }
             }
           },

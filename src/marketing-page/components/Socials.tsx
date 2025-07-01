@@ -1,22 +1,14 @@
 import * as React from "react";
 import Box from "@mui/material/Box";
-import Button from "@mui/material/Button";
 import Card from "@mui/material/Card";
-import Chip from "@mui/material/Chip";
-import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import Container from "@mui/material/Container";
-import Divider from "@mui/material/Divider";
-import Grid from "@mui/material/Grid2";
 import Typography from "@mui/material/Typography";
 import Stack from "@mui/material/Stack";
 import { Link } from "@mui/material";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import { alpha } from "@mui/material/styles";
-import AutoAwesomeIcon from "@mui/icons-material/AutoAwesome";
-import CheckCircleRoundedIcon from "@mui/icons-material/CheckCircleRounded";
-import { ThemeContext } from "@emotion/react";
 
 const tiers = [
   {
@@ -40,88 +32,141 @@ const tiers = [
   }
 ];
 
-export default function Pricing() {
+export default function Socials() {
   return (
     <Container
       id="pricing"
       sx={theme => ({
-        pt: { xs: 4, sm: 8 },
-        pb: { xs: 8, sm: 16 },
-        mt: { xs: 4, sm: 12 },
-        mb: { xs: 8, sm: 16 },
+        pt: { xs: 6, sm: 10 },
+        pb: { xs: 10, sm: 18 },
+        mt: { xs: 6, sm: 14 },
+        mb: { xs: 10, sm: 18 },
         position: "relative",
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
-        gap: { xs: 3, sm: 6 },
+        gap: { xs: 4, sm: 8 },
         backgroundColor: alpha(theme.palette.background.default, 0.7),
-        boxShadow: theme.shadows[1],
-
-        borderRadius: `calc(${theme.shape.borderRadius}px + 8px)`
+        boxShadow: theme.shadows[2],
+        borderRadius: 3,
+        backdropFilter: "blur(10px)",
+        border: `1px solid ${alpha(theme.palette.divider, 0.1)}`
       })}
     >
       <Box
         sx={{
-          width: { sm: "100%", md: "60%" },
-          textAlign: { sm: "left", md: "center" }
+          width: { sm: "100%", md: "70%" },
+          textAlign: { sm: "left", md: "center" },
+          mb: 2
         }}
       >
         <Typography
           component="h2"
           variant="h2"
           gutterBottom
-          sx={{ color: "text.primary" }}
+          sx={{
+            color: "text.primary",
+            fontWeight: 600,
+            letterSpacing: "-0.02em"
+          }}
         >
           Gdzie nas znaleźć
+        </Typography>
+        <Typography
+          variant="body1"
+          sx={{
+            color: "text.secondary",
+            mt: 1,
+            fontSize: "1.1rem"
+          }}
+        >
+          Dołącz do naszej społeczności i bądź na bieżąco
         </Typography>
       </Box>
 
       <Stack
-        direction={{ xs: "column", sm: "row" }}
-        spacing={2}
-        justifyContent={"center"}
-        alignItems={"center"}
+        direction={{ xs: "column", md: "row" }}
+        spacing={{ xs: 3, md: 4 }}
+        justifyContent="center"
+        alignItems="stretch"
+        sx={{ width: "100%" }}
       >
-        {tiers.map(tier => (
+        {tiers.map((tier, index) => (
           <Link
+            key={index}
             href={tier.link}
             target="_blank"
-            sx={{ textDecoration: "none" }}
+            rel="noopener noreferrer"
+            sx={{
+              textDecoration: "none",
+              flex: 1,
+              maxWidth: { xs: "100%", md: "350px" }
+            }}
           >
             <Card
-              className="withHover"
-              sx={[
-                theme => ({
-                  p: 2,
+              sx={theme => ({
+                height: "100%",
+                display: "flex",
+                flexDirection: "column",
+                backgroundColor: "background.default",
+                boxShadow: theme.shadows[1],
+                borderRadius: 2.5,
+                transition: "all 0.3s cubic-bezier(0.4, 0, 0.2, 1)",
+                border: `1px solid ${alpha(theme.palette.divider, 0.08)}`,
+                "&:hover": {
+                  transform: "translateY(-4px)",
+                  boxShadow: theme.shadows[4],
+                  color: alpha(theme.palette.background.default, 1),
+                  backgroundColor: alpha(theme.palette.action.hover, 0.5),
+                  "& .social-icon": {
+                    transform: "scale(1.1)",
+                    opacity: 1
+                  }
+                }
+              })}
+            >
+              <CardContent
+                sx={{
+                  p: 4,
                   display: "flex",
                   flexDirection: "column",
-                  flex: 1,
-                  backgroundColor: "background.default",
-                  boxShadow: "baseShadow",
-                  "&:hover": {
-                    backgroundColor: (theme.vars || theme).palette.action.hover,
-                    color: alpha(theme.palette.background.default, 1)
-                  }
-                })
-              ]}
-            >
-              <CardContent>
+                  alignItems: "center",
+                  textAlign: "center",
+                  height: "100%"
+                }}
+              >
                 <Box
-                  sx={[
-                    {
-                      mb: 1,
-                      display: "flex",
-                      justifyContent: "center",
-                      alignItems: "center",
-                      gap: 2,
-                      opacity: "50%"
+                  className="social-icon"
+                  sx={theme => ({
+                    mb: 3,
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    width: 64,
+                    height: 64,
+                    borderRadius: "50%",
+                    backgroundColor: alpha(theme.palette.primary.main, 0.08),
+                    transition: "all 0.3s cubic-bezier(0.4, 0, 0.2, 1)",
+                    opacity: 0.7,
+                    "& svg": {
+                      fontSize: "2rem",
+                      color: "theme.palette.action.hover"
                     }
-                  ]}
+                  })}
                 >
                   {tier.icon}
                 </Box>
 
-                <Typography variant="body1">{tier.text}</Typography>
+                <Typography
+                  variant="body1"
+                  sx={{
+                    lineHeight: 1.6,
+                    fontSize: "0.95rem",
+                    color: "inherit"
+                  }}
+                >
+                  {tier.text}
+                </Typography>
               </CardContent>
             </Card>
           </Link>

@@ -42,6 +42,12 @@ body {
   top: 0;
   z-index: -1;
   box-shadow: #4C4230 0px 4px 16px 0px, #4C4230 0px 8px 16px -5px;
+
+  @media screen and (min-width: 1200px) {
+    height: 80vh;
+    background-position: center;
+    background-size: cover;
+  }
 }
 
 .back {
@@ -76,6 +82,10 @@ body {
   @media screen and (max-width: 375px) {
       background-size: 450px;
     }
+
+            @media screen and (min-width: 1200px) {
+              height: 80vh;
+            }
 }
 
 h1 {
@@ -126,5 +136,11 @@ li {
 .withHover {
   &:hover {
     background-color: #9C9F4F
+  }
+}
+
+.content-homepage {
+  @media screen and (min-width: 1200px) {
+    margin-top: 5rem;
   }
 }

@@ -98,6 +98,9 @@ export default function AppAppBar() {
                     <Link to="/info">Najważniejsze informacje</Link>
                   </MenuItem>
                   <MenuItem onClick={handleClose}>
+                    <Link to="/con">Na konwencie</Link>
+                  </MenuItem>
+                  <MenuItem onClick={handleClose}>
                     <Link to="/merch">Merch</Link>
                   </MenuItem>
 
@@ -112,15 +115,11 @@ export default function AppAppBar() {
                   </Button>
                 </Link>
 
-                <Button
-                  variant="outlined"
-                  color="error"
-                  size="large"
-                  href="https://www.facebook.com/events/895237192729983"
-                  target="_blank"
-                >
-                  Przeprawa Królów
-                </Button>
+                <Link to="/przeprawa">
+                  <Button variant="outlined" color="error" size="large">
+                    Przeprawa Królów
+                  </Button>
+                </Link>
 
                 <Button
                   variant="contained"
@@ -164,6 +163,10 @@ export default function AppAppBar() {
                     <MenuItem>Najważniejsze informacje</MenuItem>
                   </Link>
 
+                  <Link to="/con">
+                    <MenuItem>Na konwencie</MenuItem>
+                  </Link>
+
                   <Link to="/merch">
                     <MenuItem>Merch</MenuItem>
                   </Link>
@@ -176,13 +179,9 @@ export default function AppAppBar() {
                     <MenuItem>Organizacja</MenuItem>
                   </Link>
 
-                  <MenuItem
-                    href=" https://www.facebook.com/events/895237192729983"
-                    target="_blank"
-                    component="a"
-                  >
-                    Przeprawa Królów
-                  </MenuItem>
+                  <Link to="/przeprawa">
+                    <MenuItem>Przeprawa Królów</MenuItem>
+                  </Link>
 
                   {/* <MenuItem>Testimonials</MenuItem>
                   <MenuItem>Highlights</MenuItem>

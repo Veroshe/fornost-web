@@ -3,10 +3,9 @@ import Card from "@mui/material/Card";
 import Container from "@mui/material/Container";
 import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
-import Link from "@mui/material/Link";
-import Button from "@mui/material/Button";
 import CheckroomIcon from "@mui/icons-material/Checkroom";
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
+import StorefrontIcon from "@mui/icons-material/Storefront";
 import Box from "@mui/material/Box";
 import koszulka1 from "../assets/koszulka1.png";
 import bluza from "../assets/bluza.jpg";
@@ -23,15 +22,16 @@ export default function Merch() {
           component={Card}
           spacing={1}
           useFlexGap
-          sx={{
+          sx={theme => ({
             p: 3,
             height: "100%",
             borderColor: "hsla(220, 25%, 25%, 0.3)",
             backgroundColor: "background.default",
             alignItems: "left",
             gap: 2,
-            marginTop: { xs: 4, sm: 6 }
-          }}
+            marginTop: { xs: 4, sm: 6 },
+            boxShadow: theme.shadows[1]
+          })}
         >
           <Stack
             direction="row"
@@ -138,20 +138,26 @@ export default function Merch() {
               </Typography>
             </Stack>
 
-            <Link
-              href="https://docs.google.com/forms/d/17BtvTPvXwUCWg3KCT-a32MjeW_3cj7VBDn7P6scI6rQ"
-              alignSelf={"center"}
-              target="_blank"
+            <Stack
+              direction="row"
+              spacing={1}
+              alignItems="left"
+              sx={{ marginTop: 2 }}
             >
-              <Button
-                variant="contained"
-                color="primary"
-                size="large"
-                sx={{ minWidth: "fit-content", marginTop: 2 }}
+              <StorefrontIcon color="warning" fontSize="small" />
+              <Typography
+                variant="body1"
+                sx={{
+                  color: "grey.900",
+                  textAlign: "left",
+                  whiteSpace: "pre-line"
+                }}
               >
-                Zamów koszulki i bluzy
-              </Button>
-            </Link>
+                Nie zdążyłeś złożyć zamówienia? Nic straconego! Podczas
+                kownwentu będzie możliwość zakupu fornostowych gadżetów w
+                ograniczonej ilości w orgówce.
+              </Typography>
+            </Stack>
           </Stack>
         </Stack>
       </Container>

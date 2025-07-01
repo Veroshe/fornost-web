@@ -57,12 +57,12 @@ const Chip = styled(MuiChip)<ChipProps>(({ theme }) => ({
         background:
           "linear-gradient(to bottom right, hsl(210, 98%, 48%), hsl(210, 98%, 35%))",
         color: "hsl(0, 0%, 100%)",
-        borderColor: (theme.vars || theme).palette.primary.light,
+        borderColor: theme.palette.primary.light,
         "& .MuiChip-label": {
           color: "hsl(0, 0%, 100%)"
         },
         ...theme.applyStyles("dark", {
-          borderColor: (theme.vars || theme).palette.primary.dark
+          borderColor: theme.palette.primary.dark
         })
       }
     }
@@ -112,23 +112,23 @@ export function MobileLayout({
             height: "100%",
             width: "100%",
             "&:hover": {
-              backgroundColor: (theme.vars || theme).palette.action.hover,
+              backgroundColor: theme.palette.action.hover,
               color: alpha(theme.palette.background.default, 1)
             },
-            borderColor: (theme.vars || theme).palette.divider,
+            borderColor: theme.palette.divider,
             backgroundColor: alpha(theme.palette.background.default, 0.8),
             boxShadow: theme.shadows[1]
           })
         ]}
       >
         <Box
-          sx={theme => ({
+          sx={{
             mb: 2,
             backgroundSize: "cover",
             backgroundPosition: "bottom",
             minHeight: 280,
             backgroundImage: items[selectedItemIndex].imageMobile
-          })}
+          }}
         />
         <Box
           sx={[
@@ -162,18 +162,18 @@ export default function Features() {
     setSelectedItemIndex(index);
   };
 
-  // useEffect(() => {
-  //   const interval = setInterval(
-  //     () =>
-  //       setSelectedItemIndex(selectedItemIndex =>
-  //         selectedItemIndex < 2 ? selectedItemIndex + 1 : 0
-  //       ),
-  //     5000
-  //   );
-  //   return () => {
-  //     clearInterval(interval);
-  //   };
-  // }, []);
+  useEffect(() => {
+    const interval = setInterval(
+      () =>
+        setSelectedItemIndex(selectedItemIndex =>
+          selectedItemIndex < 2 ? selectedItemIndex + 1 : 0
+        ),
+      5000
+    );
+    return () => {
+      clearInterval(interval);
+    };
+  }, []);
 
   const selectedFeature = items[selectedItemIndex];
 
@@ -206,60 +206,59 @@ export default function Features() {
               height: "100%"
             }}
           >
-            {items.map(
-              ({ icon, title, item1, item2, item3, item4, image }, index) => (
+            {items.map(({ title, item1, item2, item3, item4 }, index) => (
+              <Box
+                key={index}
+                component={Button}
+                onClick={() => handleItemClick(index)}
+                sx={[
+                  theme => ({
+                    p: 2,
+                    height: "100%",
+                    width: "100%",
+                    "&:hover": {
+                      transform: "translateY(-4px)",
+                      boxShadow: theme.shadows[4],
+                      backgroundColor: alpha(theme.palette.action.hover, 0.3),
+                      color: alpha(theme.palette.background.default, 1)
+                    },
+                    borderColor: theme.palette.divider,
+                    backgroundColor: alpha(
+                      theme.palette.background.default,
+                      0.8
+                    ),
+                    boxShadow: theme.shadows[1],
+                    transition: "all 0.3s cubic-bezier(0.4, 0, 0.2, 1)"
+                  }),
+                  selectedItemIndex === index && {
+                    backgroundColor: "action.selected",
+                    color: "#EEDDD0"
+                  }
+                ]}
+              >
                 <Box
-                  key={index}
-                  component={Button}
-                  onClick={() => handleItemClick(index)}
                   sx={[
-                    theme => ({
-                      p: 2,
-                      height: "100%",
+                    {
                       width: "100%",
-                      "&:hover": {
-                        backgroundColor: (theme.vars || theme).palette.action
-                          .hover,
-                        color: alpha(theme.palette.background.default, 1)
-                      },
-                      borderColor: (theme.vars || theme).palette.divider,
-                      backgroundColor: alpha(
-                        theme.palette.background.default,
-                        0.8
-                      ),
-                      boxShadow: theme.shadows[1],
-                      transition: "background-color 700ms linear"
-                    }),
-                    selectedItemIndex === index && {
-                      backgroundColor: "action.selected",
-                      color: "#EEDDD0"
+                      display: "flex",
+                      flexDirection: "column",
+                      alignItems: "left",
+                      gap: 1,
+                      textAlign: "left",
+                      textTransform: "none"
                     }
                   ]}
                 >
-                  <Box
-                    sx={[
-                      {
-                        width: "100%",
-                        display: "flex",
-                        flexDirection: "column",
-                        alignItems: "left",
-                        gap: 1,
-                        textAlign: "left",
-                        textTransform: "none"
-                      }
-                    ]}
-                  >
-                    <Typography variant="h6">{title}</Typography>
-                    <ul>
-                      <li>{item1}</li>
-                      <li>{item2}</li>
-                      <li>{item3}</li>
-                      {item4 && <li>{item4}</li>}
-                    </ul>
-                  </Box>
+                  <Typography variant="h6">{title}</Typography>
+                  <ul>
+                    <li>{item1}</li>
+                    <li>{item2}</li>
+                    <li>{item3}</li>
+                    {item4 && <li>{item4}</li>}
+                  </ul>
                 </Box>
-              )
-            )}
+              </Box>
+            ))}
           </Box>
           <MobileLayout
             selectedItemIndex={selectedItemIndex}
@@ -286,7 +285,7 @@ export default function Features() {
             }}
           >
             <Box
-              sx={theme => ({
+              sx={{
                 m: "auto",
                 width: 420,
                 height: 500,
@@ -295,7 +294,7 @@ export default function Features() {
                 backgroundRepeat: "no-repeat",
                 borderRadius: 2,
                 transition: "background-image 700ms linear"
-              })}
+              }}
             />
           </Card>
         </Box>

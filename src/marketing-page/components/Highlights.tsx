@@ -70,13 +70,15 @@ export default function Highlights() {
               component={Card}
               spacing={1}
               useFlexGap
-              sx={{
+              sx={theme => ({
                 p: 3,
                 height: "100%",
                 borderColor: "hsla(220, 25%, 25%, 0.3)",
                 backgroundColor: "background.default",
-                alignItems: "center"
-              }}
+                alignItems: "center",
+                boxShadow: theme.shadows[1],
+                borderRadius: 2.5
+              })}
             >
               <div>
                 <Typography
@@ -113,13 +115,15 @@ export default function Highlights() {
               component={Card}
               spacing={1}
               useFlexGap
-              sx={{
+              sx={theme => ({
                 p: 3,
                 height: "100%",
                 borderColor: "hsla(220, 25%, 25%, 0.3)",
                 backgroundColor: "background.default",
-                alignItems: "center"
-              }}
+                alignItems: "center",
+                boxShadow: theme.shadows[1],
+                borderRadius: 2.5
+              })}
             >
               <Typography
                 gutterBottom
@@ -160,13 +164,15 @@ export default function Highlights() {
               component={Card}
               spacing={1}
               useFlexGap
-              sx={{
+              sx={theme => ({
                 p: 3,
                 height: "100%",
                 borderColor: "hsla(220, 25%, 25%, 0.3)",
                 backgroundColor: "background.default",
-                alignItems: "center"
-              }}
+                alignItems: "center",
+                boxShadow: theme.shadows[1],
+                borderRadius: 2.5
+              })}
             >
               <Typography
                 gutterBottom
@@ -214,13 +220,15 @@ export default function Highlights() {
               component={Card}
               spacing={1}
               useFlexGap
-              sx={{
+              sx={theme => ({
                 p: 3,
                 height: "100%",
                 borderColor: "hsla(220, 25%, 25%, 0.3)",
                 backgroundColor: "background.default",
-                alignItems: "center"
-              }}
+                alignItems: "center",
+                boxShadow: theme.shadows[1],
+                borderRadius: 2.5
+              })}
             >
               <Typography
                 gutterBottom
@@ -254,13 +262,15 @@ export default function Highlights() {
                 component={Card}
                 spacing={1}
                 useFlexGap
-                sx={{
+                sx={theme => ({
                   p: 3,
                   height: "100%",
                   borderColor: "hsla(220, 25%, 25%, 0.3)",
                   backgroundColor: "background.default",
-                  alignItems: "center"
-                }}
+                  alignItems: "center",
+                  boxShadow: theme.shadows[1],
+                  borderRadius: 2.5
+                })}
               >
                 <Typography
                   gutterBottom
