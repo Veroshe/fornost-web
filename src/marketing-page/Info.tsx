@@ -21,10 +21,10 @@ import FamilyRestroomIcon from "@mui/icons-material/FamilyRestroom";
 import WarningIcon from "@mui/icons-material/Warning";
 
 // Import images
-import photoMap from "../assets/photos/_TYR5550 (1).jpg";
-import photo1 from "../assets/photos/_TYR4937 (1).jpg";
-import photo2 from "../assets/photos/_TYR5066 (1).jpg";
-import photo3 from "../assets/photos/_TYR5192 (1).jpg";
+import photoMap from "../assets/photos/_TYR5550.jpg";
+import photo1 from "../assets/photos/_TYR4937.jpg";
+import photo2 from "../assets/photos/_TYR5066.jpg";
+import photo3 from "../assets/photos/_TYR5192.jpg";
 
 export default function Info() {
   return (

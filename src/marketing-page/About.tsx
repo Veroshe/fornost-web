@@ -8,10 +8,10 @@ import Typography from "@mui/material/Typography";
 import Link from "@mui/material/Link";
 
 // Import images
-import photo5 from "../assets/photos/_TYR5228 (1).jpg";
-import photo6 from "../assets/photos/_TYR5279 (1).jpg";
-import photo7 from "../assets/photos/_TYR5307 (1).jpg";
-import photo8 from "../assets/photos/_TYR5459 (1).jpg";
+import photo5 from "../assets/photos/_TYR5228.jpg";
+import photo6 from "../assets/photos/_TYR5279.jpg";
+import photo7 from "../assets/photos/_TYR5307.jpg";
+import photo8 from "../assets/photos/_TYR5459.jpg";
 
 export default function About() {
   return (
