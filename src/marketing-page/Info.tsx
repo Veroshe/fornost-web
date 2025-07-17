@@ -4,7 +4,6 @@ import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
 import Link from "@mui/material/Link";
 import Button from "@mui/material/Button";
-import Grid from "@mui/material/Grid";
 import PinDropIcon from "@mui/icons-material/PinDrop";
 import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
 import FestivalIcon from "@mui/icons-material/Festival";
@@ -18,12 +17,6 @@ import SportsKabaddiIcon from "@mui/icons-material/SportsKabaddi";
 import HealthAndSafetyIcon from "@mui/icons-material/HealthAndSafety";
 import FamilyRestroomIcon from "@mui/icons-material/FamilyRestroom";
 import WarningIcon from "@mui/icons-material/Warning";
-
-// Import images - using public folder for production compatibility
-const photoMap = "../assets/photos/_TYR5550.jpg";
-const photo1 = "/assets/photos/_TYR4937.jpg";
-const photo2 = "/assets/photos/_TYR5066.jpg";
-const photo3 = "/assets/photos/_TYR5192.jpg";
 
 export default function Info() {
   return (
@@ -57,72 +50,53 @@ export default function Info() {
               Gdzie i kiedy
             </Typography>
 
-            <Grid container spacing={2} sx={{ marginTop: 1 }}>
-              <Grid item xs={12} md={8}>
-                <Stack>
-                  <Typography
-                    variant="body1"
-                    sx={{
-                      color: "grey.900",
-                      textAlign: "left",
-                      whiteSpace: "pre-line"
-                    }}
-                  >
-                    Fornost to tygodniowy, terenowy konwent dla miłośników
-                    fantasy. Odbywa się w miejscowości Czatachowa położnej na
-                    Jurze Krakowsko-Częstochowskiej. Program imprezy pełny jest
-                    larpów, warsztatów i konkursów. Główną atrakcję stanowi
-                    2-dniowy LARP osadzony w świecie J.R.R. Tolkiena.
-                    <br />
-                    <br />
-                  </Typography>
-                </Stack>
-                <Stack spacing={2}>
-                  <Stack direction="row" spacing={1} alignItems="left">
-                    <CalendarMonthIcon color="warning" fontSize="small" />
-                    <Typography
-                      variant="body1"
-                      sx={{
-                        color: "grey.900",
-                        textAlign: "left",
-                        whiteSpace: "pre-line"
-                      }}
-                    >
-                      27.07 - 03.08.2025
-                    </Typography>
-                  </Stack>
-
-                  <Stack direction="row" spacing={1} alignItems="left">
-                    <PinDropIcon color="warning" fontSize="small" />
-                    <Typography
-                      variant="body1"
-                      sx={{
-                        color: "grey.900",
-                        textAlign: "left",
-                        whiteSpace: "pre-line"
-                      }}
-                    >
-                      Czatachowa, Jura Krakowsko-Częstochowska.
-                    </Typography>
-                  </Stack>
-                </Stack>
-              </Grid>
-              <Grid
-                item
-                xs={12}
-                md={4}
+            <Stack>
+              <Typography
+                variant="body1"
                 sx={{
-                  backgroundImage: `url(${photoMap})`,
-                  backgroundSize: "cover",
-                  backgroundPosition: "center",
-                  backgroundRepeat: "no-repeat",
-                  borderRadius: 1,
-                  height: "250px",
-                  width: "100%",
-                  boxShadow: 2
+                  color: "grey.900",
+                  textAlign: "left",
+                  whiteSpace: "pre-line"
                 }}
-              />
-            </Grid>
+              >
+                Fornost to tygodniowy, terenowy konwent dla miłośników fantasy.
+                Odbywa się w miejscowości Czatachowa położnej na Jurze
+                Krakowsko-Częstochowskiej. Program imprezy pełny jest larpów,
+                warsztatów i konkursów. Główną atrakcję stanowi 2-dniowy LARP
+                osadzony w świecie J.R.R. Tolkiena.
+                <br />
+                <br />
+              </Typography>
+            </Stack>
+            <Stack spacing={2}>
+              <Stack direction="row" spacing={1} alignItems="left">
+                <CalendarMonthIcon color="warning" fontSize="small" />
+                <Typography
+                  variant="body1"
+                  sx={{
+                    color: "grey.900",
+                    textAlign: "left",
+                    whiteSpace: "pre-line"
+                  }}
+                >
+                  27.07 - 03.08.2025
+                </Typography>
+              </Stack>
+
+              <Stack direction="row" spacing={1} alignItems="left">
+                <PinDropIcon color="warning" fontSize="small" />
+                <Typography
+                  variant="body1"
+                  sx={{
+                    color: "grey.900",
+                    textAlign: "left",
+                    whiteSpace: "pre-line"
+                  }}
+                >
+                  Czatachowa, Jura Krakowsko-Częstochowska.
+                </Typography>
+              </Stack>
+            </Stack>
           </Stack>
 
           {/* Accommodation, food, transport section - with food image */}
@@ -135,107 +109,87 @@ export default function Info() {
               Nocleg, wyżywienie, dojazd
             </Typography>
 
-            <Grid container spacing={2} sx={{ marginTop: 2 }}>
-              <Grid item xs={12} md={8}>
-                <Stack spacing={2}>
-                  <Stack direction="row" spacing={1} alignItems="left">
-                    <FestivalIcon color="warning" fontSize="small" />
-                    <Typography
-                      variant="body1"
-                      sx={{
-                        color: "grey.900",
-                        textAlign: "left",
-                        whiteSpace: "pre-line"
-                      }}
-                    >
-                      Nocleg - na polu namiotowym (w cenie biletu) z dostępem do
-                      przenośnych toalet i pryszniców oraz możliwością
-                      korzystania z prądu. Podczas wszystkich larpów i innych
-                      punktów programu dostępna jest woda pitna w baniakach.
-                      Przez całą dobę na terenie pola namiotowego dostępny jest
-                      warnik z gorącą, przegotowaną wodą.
-                    </Typography>
-                  </Stack>
+            <Stack spacing={2}>
+              <Stack direction="row" spacing={1} alignItems="left">
+                <FestivalIcon color="warning" fontSize="small" />
+                <Typography
+                  variant="body1"
+                  sx={{
+                    color: "grey.900",
+                    textAlign: "left",
+                    whiteSpace: "pre-line"
+                  }}
+                >
+                  Nocleg - na polu namiotowym (w cenie biletu) z dostępem do
+                  przenośnych toalet i pryszniców oraz możliwością korzystania z
+                  prądu. Podczas wszystkich larpów i innych punktów programu
+                  dostępna jest woda pitna w baniakach. Przez całą dobę na
+                  terenie pola namiotowego dostępny jest warnik z gorącą,
+                  przegotowaną wodą.
+                </Typography>
+              </Stack>
 
-                  <Stack direction="row" spacing={1} alignItems="left">
-                    <LocalHotelIcon color="warning" fontSize="small" />
-                    <Typography
-                      variant="body1"
-                      sx={{
-                        color: "grey.900",
-                        textAlign: "left",
-                        whiteSpace: "pre-line"
-                      }}
-                    >
-                      Okoliczna agroturystyka - we własnym zakresie.
-                    </Typography>
-                  </Stack>
+              <Stack direction="row" spacing={1} alignItems="left">
+                <LocalHotelIcon color="warning" fontSize="small" />
+                <Typography
+                  variant="body1"
+                  sx={{
+                    color: "grey.900",
+                    textAlign: "left",
+                    whiteSpace: "pre-line"
+                  }}
+                >
+                  Okoliczna agroturystyka - we własnym zakresie.
+                </Typography>
+              </Stack>
 
-                  <Stack direction="row" spacing={1} alignItems="left">
-                    <FlatwareIcon color="warning" fontSize="small" />
-                    <Typography
-                      variant="body1"
-                      sx={{
-                        color: "grey.900",
-                        textAlign: "left",
-                        whiteSpace: "pre-line"
-                      }}
-                    >
-                      Do dyspozycji wszystkich uczestników będzie catering od{" "}
-                      <a
-                        href="https://www.przystanlesniow.pl/resturacja/restauracja"
-                        target="_blank"
-                      >
-                        Przystani Leśniów{" "}
-                      </a>
-                      oferujący śniadania, dania z grilla i (zamawiane dzień
-                      wcześniej) zestawy obiadowe. Oprócz posiłków, Przystań
-                      Leśniów będzie mieć w swoim asortymencie ciepłe i zimne
-                      napoje (zarówno alkoholowe, jak i bezalkoholowe) oraz
-                      przekąski.
-                    </Typography>
-                  </Stack>
+              <Stack direction="row" spacing={1} alignItems="left">
+                <FlatwareIcon color="warning" fontSize="small" />
+                <Typography
+                  variant="body1"
+                  sx={{
+                    color: "grey.900",
+                    textAlign: "left",
+                    whiteSpace: "pre-line"
+                  }}
+                >
+                  Do dyspozycji wszystkich uczestników będzie catering od{" "}
+                  <a
+                    href="https://www.przystanlesniow.pl/resturacja/restauracja"
+                    target="_blank"
+                  >
+                    Przystani Leśniów{" "}
+                  </a>
+                  oferujący śniadania, dania z grilla i (zamawiane dzień
+                  wcześniej) zestawy obiadowe. Oprócz posiłków, Przystań Leśniów
+                  będzie mieć w swoim asortymencie ciepłe i zimne napoje
+                  (zarówno alkoholowe, jak i bezalkoholowe) oraz przekąski.
+                </Typography>
+              </Stack>
 
-                  <Stack direction="row" spacing={1} alignItems="left">
-                    <DirectionsTransitIcon color="warning" fontSize="small" />
-                    <Typography
-                      variant="body1"
-                      sx={{
-                        color: "grey.900",
-                        textAlign: "left",
-                        whiteSpace: "pre-line"
-                      }}
-                    >
-                      Najbliższą miejscowością, do której dojeżdża pociąg oraz
-                      autobusy dalekobieżne jest Myszków. Jeśli nie masz
-                      mozliwości dojazdu z Myszkowa lub innej pobliskiej
-                      miejscowości - dołącz do naszego{" "}
-                      <a href="https://discord.gg/P586NAPCxy" target="_blank">
-                        serwera na Discordzie{" "}
-                      </a>
-                      i zapytaj o możliwości podwózki. Co roku wiele osób
-                      organizuje się na wspólny dojazd, na pewno znajdzie się
-                      ktoś kto będzie mógł Ci pomóc.
-                    </Typography>
-                  </Stack>
-                </Stack>
-              </Grid>
-              <Grid
-                item
-                xs={12}
-                md={4}
-                sx={{
-                  backgroundImage: `url(${photo1})`,
-                  backgroundSize: "cover",
-                  backgroundPosition: "center",
-                  backgroundRepeat: "no-repeat",
-                  borderRadius: 1,
-                  height: "250px",
-                  width: "100%",
-                  boxShadow: 2
-                }}
-              />
-            </Grid>
+              <Stack direction="row" spacing={1} alignItems="left">
+                <DirectionsTransitIcon color="warning" fontSize="small" />
+                <Typography
+                  variant="body1"
+                  sx={{
+                    color: "grey.900",
+                    textAlign: "left",
+                    whiteSpace: "pre-line"
+                  }}
+                >
+                  Najbliższą miejscowością, do której dojeżdża pociąg oraz
+                  autobusy dalekobieżne jest Myszków. Jeśli nie masz mozliwości
+                  dojazdu z Myszkowa lub innej pobliskiej miejscowości - dołącz
+                  do naszego{" "}
+                  <a href="https://discord.gg/P586NAPCxy" target="_blank">
+                    serwera na Discordzie{" "}
+                  </a>
+                  i zapytaj o możliwości podwózki. Co roku wiele osób organizuje
+                  się na wspólny dojazd, na pewno znajdzie się ktoś kto będzie
+                  mógł Ci pomóc.
+                </Typography>
+              </Stack>
+            </Stack>
           </Stack>
 
           {/* Tickets section - text only */}
@@ -297,84 +251,65 @@ export default function Info() {
               Atrakcje
             </Typography>
 
-            <Grid container spacing={2} sx={{ marginTop: 2 }}>
-              <Grid item xs={12} md={8}>
-                <Stack spacing={2}>
-                  <Stack direction="row" spacing={1} alignItems="left">
-                    <AttractionsIcon color="warning" fontSize="small" />
-                    <Typography
-                      variant="body1"
-                      sx={{
-                        color: "grey.900",
-                        textAlign: "left",
-                        whiteSpace: "pre-line"
-                      }}
-                    >
-                      LARPy, konkursy i turnieje odbywające się z dala od
-                      cywilizacji, na obszernych terenach leśnych w pobliżu pola
-                      obozowego
-                    </Typography>
-                  </Stack>
+            <Stack spacing={2}>
+              <Stack direction="row" spacing={1} alignItems="left">
+                <AttractionsIcon color="warning" fontSize="small" />
+                <Typography
+                  variant="body1"
+                  sx={{
+                    color: "grey.900",
+                    textAlign: "left",
+                    whiteSpace: "pre-line"
+                  }}
+                >
+                  LARPy, konkursy i turnieje odbywające się z dala od
+                  cywilizacji, na obszernych terenach leśnych w pobliżu pola
+                  obozowego
+                </Typography>
+              </Stack>
 
-                  <Stack direction="row" spacing={1} alignItems="left">
-                    <LocalFireDepartmentIcon color="warning" fontSize="small" />
-                    <Typography
-                      variant="body1"
-                      sx={{
-                        color: "grey.900",
-                        textAlign: "left",
-                        whiteSpace: "pre-line"
-                      }}
-                    >
-                      Co wieczorne ognisko z śpiewem i dobrą zabawą.
-                    </Typography>
-                  </Stack>
+              <Stack direction="row" spacing={1} alignItems="left">
+                <LocalFireDepartmentIcon color="warning" fontSize="small" />
+                <Typography
+                  variant="body1"
+                  sx={{
+                    color: "grey.900",
+                    textAlign: "left",
+                    whiteSpace: "pre-line"
+                  }}
+                >
+                  Co wieczorne ognisko z śpiewem i dobrą zabawą.
+                </Typography>
+              </Stack>
 
-                  <Stack direction="row" spacing={1} alignItems="left">
-                    <SportsKabaddiIcon color="warning" fontSize="small" />
-                    <Typography
-                      variant="body1"
-                      sx={{
-                        color: "grey.900",
-                        textAlign: "left",
-                        whiteSpace: "pre-line"
-                      }}
-                    >
-                      Największym punktem w programie Fornostu jest Gra Główna –
-                      dwudniowy larp w tolkienowskim świecie Śródziemia. Jeśli
-                      wybierasz się na Fornost po raz pierwszy i chcesz wziąć
-                      udział w LARPie, przeczytaj Podręcznik Gracza i wypełnij
-                      formularz zgłoszeniowy, które znajdziesz na{" "}
-                      <a
-                        href="https://www.facebook.com/events/895237192729983"
-                        target="_blank"
-                      >
-                        stronie wydarzenia Gry Głównej na Facebooku.
-                      </a>{" "}
-                      Wszelkie pytania możesz również kierować do nas na{" "}
-                      <a href="https://discord.gg/P586NAPCxy" target="_blank">
-                        Discordzie{" "}
-                      </a>
-                    </Typography>
-                  </Stack>
-                </Stack>
-              </Grid>
-              <Grid
-                item
-                xs={12}
-                md={4}
-                sx={{
-                  backgroundImage: `url(${photo2})`,
-                  backgroundSize: "cover",
-                  backgroundPosition: "center",
-                  backgroundRepeat: "no-repeat",
-                  borderRadius: 1,
-                  height: "250px",
-                  width: "100%",
-                  boxShadow: 2
-                }}
-              />
-            </Grid>
+              <Stack direction="row" spacing={1} alignItems="left">
+                <SportsKabaddiIcon color="warning" fontSize="small" />
+                <Typography
+                  variant="body1"
+                  sx={{
+                    color: "grey.900",
+                    textAlign: "left",
+                    whiteSpace: "pre-line"
+                  }}
+                >
+                  Największym punktem w programie Fornostu jest Gra Główna –
+                  dwudniowy larp w tolkienowskim świecie Śródziemia. Jeśli
+                  wybierasz się na Fornost po raz pierwszy i chcesz wziąć udział
+                  w LARPie, przeczytaj Podręcznik Gracza i wypełnij formularz
+                  zgłoszeniowy, które znajdziesz na{" "}
+                  <a
+                    href="https://www.facebook.com/events/895237192729983"
+                    target="_blank"
+                  >
+                    stronie wydarzenia Gry Głównej na Facebooku.
+                  </a>{" "}
+                  Wszelkie pytania możesz również kierować do nas na{" "}
+                  <a href="https://discord.gg/P586NAPCxy" target="_blank">
+                    Discordzie{" "}
+                  </a>
+                </Typography>
+              </Stack>
+            </Stack>
           </Stack>
 
           {/* Safety section - text only */}
@@ -387,88 +322,69 @@ export default function Info() {
               Bezpieczeństwo
             </Typography>
 
-            <Grid container spacing={2} sx={{ marginTop: 2 }}>
-              <Grid item xs={12} md={8}>
-                <Stack spacing={2}>
-                  <Stack direction="row" spacing={1} alignItems="left">
-                    <HealthAndSafetyIcon color="warning" fontSize="small" />
-                    <Typography
-                      variant="body1"
-                      sx={{
-                        color: "grey.900",
-                        textAlign: "left",
-                        whiteSpace: "pre-line"
-                      }}
-                    >
-                      Na Fornoście zawsze przebywa osoba dyżurująca,
-                      zmotoryzowana, gotowa odpowiednio zareagować na wypadki i
-                      inne niefortunne zdarzenia. W ekipie organizatorskiej
-                      znajduje się również osoba po kursie pierwszej pomocy,
-                      mogąca udzielić pomocy w razie potrzeby.
-                    </Typography>
-                  </Stack>
+            <Stack spacing={2}>
+              <Stack direction="row" spacing={1} alignItems="left">
+                <HealthAndSafetyIcon color="warning" fontSize="small" />
+                <Typography
+                  variant="body1"
+                  sx={{
+                    color: "grey.900",
+                    textAlign: "left",
+                    whiteSpace: "pre-line"
+                  }}
+                >
+                  Na Fornoście zawsze przebywa osoba dyżurująca, zmotoryzowana,
+                  gotowa odpowiednio zareagować na wypadki i inne niefortunne
+                  zdarzenia. W ekipie organizatorskiej znajduje się również
+                  osoba po kursie pierwszej pomocy, mogąca udzielić pomocy w
+                  razie potrzeby.
+                </Typography>
+              </Stack>
 
-                  <Stack direction="row" spacing={1} alignItems="left">
-                    <WarningIcon color="warning" fontSize="small" />
-                    <Typography
-                      variant="body1"
-                      sx={{
-                        color: "grey.900",
-                        textAlign: "left",
-                        whiteSpace: "pre-line"
-                      }}
-                    >
-                      Osoby bezpieczeństwa - w razie sytuacji kryzysowej, w
-                      której czujesz się zagrożony lub niekomfortowo, zgłoś się
-                      do jednej z tych osób. Osobami bezpieczeństwa na edycji
-                      2025 są - Małgorzata Jakubowska, Ida 'Gin' Pacer, Bartosz
-                      'Artysta' Brózda, Filip 'Famos' Wróblewski.
-                    </Typography>
-                  </Stack>
+              <Stack direction="row" spacing={1} alignItems="left">
+                <WarningIcon color="warning" fontSize="small" />
+                <Typography
+                  variant="body1"
+                  sx={{
+                    color: "grey.900",
+                    textAlign: "left",
+                    whiteSpace: "pre-line"
+                  }}
+                >
+                  Osoby bezpieczeństwa - w razie sytuacji kryzysowej, w której
+                  czujesz się zagrożony lub niekomfortowo, zgłoś się do jednej z
+                  tych osób. Osobami bezpieczeństwa na edycji 2025 są -
+                  Małgorzata Jakubowska, Ida 'Gin' Pacer, Bartosz 'Artysta'
+                  Brózda, Filip 'Famos' Wróblewski.
+                </Typography>
+              </Stack>
 
-                  <Stack direction="row" spacing={1} alignItems="left">
-                    <FamilyRestroomIcon color="warning" fontSize="small" />
-                    <Typography
-                      variant="body1"
-                      sx={{
-                        color: "grey.900",
-                        textAlign: "left",
-                        whiteSpace: "pre-line"
-                      }}
-                    >
-                      Ze względów bezpieczeństwa, osoby w wieku poniżej 15 lat
-                      nie mogą wziąć udziału w Fornoście inaczej niż pod opieką
-                      pełnoletniego opiekuna, wskazanego na piśmie przez
-                      opiekunów prawnych. Osoby niepełnoletnie, które skończyły
-                      15 lat, podczas akredytacji muszą przedłożyć zgodę
-                      rodziców (lub opiekunów prawnych) na udział dziecka w
-                      Fornoście. Formularz zgody można pobrać z{" "}
-                      <a
-                        href="https://drive.google.com/file/d/10OVwLGKLCPoKyXGm_Gbva9wiB0CKkGSs/view"
-                        target="_blank"
-                      >
-                        tego adresu.
-                      </a>
-                    </Typography>
-                  </Stack>
-                </Stack>
-              </Grid>
-              <Grid
-                item
-                xs={12}
-                md={4}
-                sx={{
-                  backgroundImage: `url(${photo3})`,
-                  backgroundSize: "cover",
-                  backgroundPosition: "center",
-                  backgroundRepeat: "no-repeat",
-                  borderRadius: 1,
-                  height: "250px",
-                  width: "100%",
-                  boxShadow: 2
-                }}
-              />
-            </Grid>
+              <Stack direction="row" spacing={1} alignItems="left">
+                <FamilyRestroomIcon color="warning" fontSize="small" />
+                <Typography
+                  variant="body1"
+                  sx={{
+                    color: "grey.900",
+                    textAlign: "left",
+                    whiteSpace: "pre-line"
+                  }}
+                >
+                  Ze względów bezpieczeństwa, osoby w wieku poniżej 15 lat nie
+                  mogą wziąć udziału w Fornoście inaczej niż pod opieką
+                  pełnoletniego opiekuna, wskazanego na piśmie przez opiekunów
+                  prawnych. Osoby niepełnoletnie, które skończyły 15 lat,
+                  podczas akredytacji muszą przedłożyć zgodę rodziców (lub
+                  opiekunów prawnych) na udział dziecka w Fornoście. Formularz
+                  zgody można pobrać z{" "}
+                  <a
+                    href="https://drive.google.com/file/d/10OVwLGKLCPoKyXGm_Gbva9wiB0CKkGSs/view"
+                    target="_blank"
+                  >
+                    tego adresu.
+                  </a>
+                </Typography>
+              </Stack>
+            </Stack>
           </Stack>
         </Stack>
       </Container>
