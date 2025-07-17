@@ -7,11 +7,11 @@ import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
 import Link from "@mui/material/Link";
 
-// Import images
-import photo5 from "../assets/photos/_TYR5228.jpg";
-import photo6 from "../assets/photos/_TYR5279.jpg";
-import photo7 from "../assets/photos/_TYR5307.jpg";
-import photo8 from "../assets/photos/_TYR5459.jpg";
+// Import images - using public folder for production compatibility
+const photo5 = "/photos/_TYR5228.jpg";
+const photo6 = "/photos/_TYR5279.jpg";
+const photo7 = "/photos/_TYR5307.jpg";
+const photo8 = "/photos/_TYR5459.jpg";
 
 export default function About() {
   return (

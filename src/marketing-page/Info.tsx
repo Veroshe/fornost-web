@@ -20,11 +20,11 @@ import HealthAndSafetyIcon from "@mui/icons-material/HealthAndSafety";
 import FamilyRestroomIcon from "@mui/icons-material/FamilyRestroom";
 import WarningIcon from "@mui/icons-material/Warning";
 
-// Import images
-import photoMap from "../assets/photos/_TYR5550.jpg";
-import photo1 from "../assets/photos/_TYR4937.jpg";
-import photo2 from "../assets/photos/_TYR5066.jpg";
-import photo3 from "../assets/photos/_TYR5192.jpg";
+// Import images - using public folder for production compatibility
+const photoMap = "/photos/_TYR5550.jpg";
+const photo1 = "/photos/_TYR4937.jpg";
+const photo2 = "/photos/_TYR5066.jpg";
+const photo3 = "/photos/_TYR5192.jpg";
 
 export default function Info() {
   return (
