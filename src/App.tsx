@@ -18,6 +18,7 @@ import Org from "./marketing-page/Org";
 import Merch from "./marketing-page/Merch";
 import NaKonwencie from "./marketing-page/components/NaKonwencie";
 import PrzeprawaKrolow from "./marketing-page/PrzeprawaKrolow";
+import History from "./marketing-page/History";
 
 const router = createHashRouter(
   createRoutesFromElements(
@@ -29,6 +30,7 @@ const router = createHashRouter(
       <Route path="org" element={<Org />} />
       <Route path="merch" element={<Merch />} />
       <Route path="przeprawa" element={<PrzeprawaKrolow />} />
+      <Route path="history" element={<History />} />
     </Route>
   )
 );

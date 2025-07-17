@@ -6,23 +6,6 @@ import Grid from "@mui/material/Grid2";
 import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
 import Link from "@mui/material/Link";
-import Button from "@mui/material/Button";
-import PinDropIcon from "@mui/icons-material/PinDrop";
-import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
-import FestivalIcon from "@mui/icons-material/Festival";
-import LocalHotelIcon from "@mui/icons-material/LocalHotel";
-import FlatwareIcon from "@mui/icons-material/Flatware";
-import DirectionsTransitIcon from "@mui/icons-material/DirectionsTransit";
-import LocalActivityIcon from "@mui/icons-material/LocalActivity";
-import WaterDropIcon from "@mui/icons-material/WaterDrop";
-import AttractionsIcon from "@mui/icons-material/Attractions";
-import LocalFireDepartmentIcon from "@mui/icons-material/LocalFireDepartment";
-import SportsKabaddiIcon from "@mui/icons-material/SportsKabaddi";
-import HealthAndSafetyIcon from "@mui/icons-material/HealthAndSafety";
-import FamilyRestroomIcon from "@mui/icons-material/FamilyRestroom";
-import BackpackIcon from "@mui/icons-material/Backpack";
-import InfoIcon from "@mui/icons-material/Info";
-import AssignmentIcon from "@mui/icons-material/Assignment";
 
 import { styled, alpha } from "@mui/material/styles";
 import { Pin } from "@mui/icons-material";
@@ -122,14 +105,14 @@ export default function About() {
                 odbywające się z dala od cywilizacji, na obszernych terenach
                 leśnych w pobliżu pola obozowego. Jednakże Fornost ma do
                 zaoferowania znacznie więcej atrakcji, niż widnieje w tabeli
-                programowej. Co wieczór odbywają się ogniska z gitarą,. Ponadto
+                programowej. Co wieczór odbywają się ogniska z gitarą. Ponadto
                 okolica z jurajskimi skałami i szlakami turystycznymi jest
-                atrakcją samą w sobie. Największym punktem w programie Fornostu
-                jest Gra Główna – dwudniowy larp w tolkienowskim świecie
-                Śródziemia. Jeśli wybierasz się na Fornost po raz pierwszy i
+                atrakcją samą w sobie. Najważniejszym punktem w programie
+                Fornostu jest Gra Główna – dwudniowy larp w Tolkienowskim
+                Śródziemiu. Jeśli wybierasz się na Fornost po raz pierwszy i
                 chcesz wziąć udział w LARPie, przeczytaj Podręcznik Gracza i
-                wypełnij formularz zgłoszeniowy, które znajdziesz na stronie
-                wydarzenia Gry Głównej na Facebooku.Wszelkie pytania możesz
+                wypełnij formularz zgłoszeniowy, które znajdziesz{" "}
+                <Link href="/#/przeprawa">tutaj</Link>. Wszelkie pytania możesz
                 również kierować do nas na{" "}
                 <a href="https://discord.gg/P586NAPCxy" target="_blank">
                   Discordzie
@@ -223,8 +206,8 @@ export default function About() {
               >
                 W trakcie trwania konwentu możecie zauważyć, że niektóre osoby
                 noszą kolorowe bandany. Oznaczają one konkretne funkcje, jakie
-                pełni dana osoba na imprezie: 🔴 Organizator 🔵 Helper 🟢 Twórca
-                programu, w tym GG
+                pełni dana osoba na imprezie: 🔴 Organizator 🟢 Twórca Gry
+                Głównej ⚪ Osoba bezpieczeństwa
               </Typography>
             </Stack>
           </Stack>
@@ -239,7 +222,7 @@ export default function About() {
             </Typography>
 
             <Stack
-              direction="row"
+              direction="column"
               spacing={1}
               alignItems="left"
               sx={{ marginTop: 2 }}
@@ -252,22 +235,15 @@ export default function About() {
                   whiteSpace: "pre-line"
                 }}
               >
-                Jeśli planujesz nocleg pod namiotem, weź… namiot 🙂 Nieodzowny
-                będzie też śpiwór (najlepiej z karimatą). Noce na przełomie
-                lipca i sierpnia są zwykle dość ciepłe, więc nie musisz
-                zaopatrywać się w sprzęt polarny, niemniej ciepła kurtka może
-                się przydać. Na wypadek deszczowej aury rozważ coś
-                przeciwdeszczowego i odpowiednie obuwie (świetnie sprawdzają się
-                kalosze).
+                Jeśli planujesz nocleg pod namiotem, weź… namiot (oczywiście
+                wraz ze śpiworem i karimatą/materacem). Noce na przełomie lipca
+                i sierpnia są zwykle dość ciepłe, więc nie musisz zaopatrywać
+                się w sprzęt polarny, niemniej ciepła kurtka czy odzież
+                termiczna może się przydać. Na wypadek deszczowej aury rozważ
+                coś przeciwdeszczowego i odpowiednie obuwie (świetnie sprawdzają
+                się kalosze).
               </Typography>
-            </Stack>
 
-            <Stack
-              direction="row"
-              spacing={1}
-              alignItems="left"
-              sx={{ marginTop: 2 }}
-            >
               <Typography
                 variant="body1"
                 sx={{
@@ -279,17 +255,20 @@ export default function About() {
                 Przydatna może okazać się również latarka (najlepiej
                 „czołówka”). Nie zaszkodzi też uzbroić się w zapasowe baterie do
                 niej. Zalecamy także zabranie ze sobą kremów z filtrem oraz
-                preparatu odstraszającego komary i kleszcze. Koniecznie zabierz
-                ze sobą dowód osobisty lub legitymację szkolną (wymagamy
-                dokumentu przy akredytacji) oraz dużo lekkich, przewiewnych
-                ubrań. Przygotuj sobie również stroje na larpy, jeśli zamierzasz
-                brać w nich udział (zgłosiwszy się przed konwentem do
-                organizatorów poszczególnych gier po postaci, dowiesz się,
-                jakich strojów będzie Ci potrzeba). Warto zaopatrzyć się we
-                własnym zakresie w klimatyczny ubiór, buty, nakrycia głowy,
-                akcesoria, bezpieczną broń itp. Bardzo ważnymi akcesoriami dla
-                uczestników Gry Głównej są własne (klimatyczne) naczynia i
-                sztućce oraz źródło światła (lampiony czy świece LED).
+                preparatu odstraszającego komary i kleszcze.
+              </Typography>
+
+              <Typography
+                variant="body1"
+                sx={{
+                  color: "grey.900",
+                  textAlign: "left",
+                  whiteSpace: "pre-line"
+                }}
+              >
+                Koniecznie zabierz ze sobą dowód osobisty lub legitymację
+                szkolną (wymagamy dokumentu przy akredytacji) oraz dużo lekkich,
+                przewiewnych ubrań.
               </Typography>
             </Stack>
 
@@ -307,14 +286,42 @@ export default function About() {
                   whiteSpace: "pre-line"
                 }}
               >
-                A jeśli poszukujesz rozszerzonej listy, którą możesz z łatwością
-                skopiować lub wydrukować, zerknij{" "}
+                Przygotuj sobie również stroje na larpy, jeśli zamierzasz brać w
+                nich udział. Warto zaopatrzyć się we własnym zakresie w
+                klimatyczny ubiór, buty, nakrycia głowy, akcesoria, bezpieczną
+                broń itp.{" "}
+                <b>
+                  Bardzo ważnymi akcesoriami dla uczestników Gry Głównej są
+                  własne (klimatyczne) naczynia i sztućce oraz źródło światła
+                  (lampiony czy świece LED).
+                </b>
+              </Typography>
+            </Stack>
+
+            <Stack
+              direction="row"
+              spacing={1}
+              alignItems="left"
+              sx={{ marginTop: 2 }}
+            >
+              <Typography
+                variant="body1"
+                sx={{
+                  color: "grey.900",
+                  textAlign: "left",
+                  whiteSpace: "pre-line"
+                }}
+              >
+                A jeśli poszukujesz rozszerzonej listy, zobacz przygotowaną
+                przez nas
                 <a
                   href="https://docs.google.com/spreadsheets/d/1J9lHCVVVNate3HOM0jspIGSs-9J4Epb2JKUJfQ4voLA/edit?gid=361035351#gid=361035351"
                   target="_blank"
                 >
-                  właśnie tutaj.
-                </a>
+                  listę,
+                </a>{" "}
+                dzięki której o niczym nie zapomnisz. Plik możesz skopiować na
+                swój dysk i np. wydrukować.
               </Typography>
             </Stack>
           </Stack>

@@ -6,12 +6,10 @@ import Toolbar from "@mui/material/Toolbar";
 import Button from "@mui/material/Button";
 import IconButton from "@mui/material/IconButton";
 import Container from "@mui/material/Container";
-import Divider from "@mui/material/Divider";
 import MenuItem from "@mui/material/MenuItem";
 import Drawer from "@mui/material/Drawer";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseRoundedIcon from "@mui/icons-material/CloseRounded";
-import Sitemark from "./SitemarkIcon";
 import { Outlet, Link } from "react-router-dom";
 import logo from "../../assets/stare.png";
 import Menu from "@mui/material/Menu";
@@ -115,9 +113,15 @@ export default function AppAppBar() {
                   </Button>
                 </Link>
 
+                <Link to="/history">
+                  <Button variant="outlined" color="error" size="large">
+                    Historia
+                  </Button>
+                </Link>
+
                 <Link to="/przeprawa">
                   <Button variant="outlined" color="error" size="large">
-                    Przeprawa Królów
+                    LARP Przeprawa Królów
                   </Button>
                 </Link>
 
@@ -175,12 +179,16 @@ export default function AppAppBar() {
                     <MenuItem>O konwencie</MenuItem>
                   </Link>
 
+                  <Link to="/history">
+                    <MenuItem>Historia</MenuItem>
+                  </Link>
+
                   <Link to="/org">
                     <MenuItem>Organizacja</MenuItem>
                   </Link>
 
                   <Link to="/przeprawa">
-                    <MenuItem>Przeprawa Królów</MenuItem>
+                    <MenuItem>LARP Przeprawa Królów</MenuItem>
                   </Link>
 
                   {/* <MenuItem>Testimonials</MenuItem>
