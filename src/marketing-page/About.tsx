@@ -1,5 +1,4 @@
 import * as React from "react";
-import Box from "@mui/material/Box";
 import Card from "@mui/material/Card";
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
@@ -8,10 +7,10 @@ import Typography from "@mui/material/Typography";
 import Link from "@mui/material/Link";
 
 // Import images - using public folder for production compatibility
-const photo5 = "/photos/_TYR5228.jpg";
-const photo6 = "/photos/_TYR5279.jpg";
-const photo7 = "/photos/_TYR5307.jpg";
-const photo8 = "/photos/_TYR5459.jpg";
+const photo5 = "../assets/photos/_TYR5228.jpg";
+const photo6 = "../assets/photos/_TYR5279.jpg";
+const photo7 = "../assets/photos/_TYR5307.jpg";
+const photo8 = "../assets/photos/_TYR5459.jpg";
 
 export default function About() {
   return (
@@ -43,7 +42,7 @@ export default function About() {
           >
             O Fornoście
           </Typography>
-          <Grid container spacing={3} sx={{ marginTop: 2 }}>
+          <Grid container spacing={2} sx={{ marginTop: 2 }}>
             <Grid item xs={12} md={8}>
               <Stack spacing={2}>
                 <Typography
@@ -85,19 +84,21 @@ export default function About() {
                 </Typography>
               </Stack>
             </Grid>
-            <Grid item xs={12} md={4}>
-              <Box
-                component="img"
-                src={photo5}
-                alt="Fornost - historia i tradycja"
-                sx={{
-                  width: "100%",
-                  height: "auto",
-                  borderRadius: 1,
-                  boxShadow: 2
-                }}
-              />
-            </Grid>
+            <Grid
+              item
+              xs={12}
+              md={4}
+              sx={{
+                backgroundImage: `url(${photo5})`,
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+                backgroundRepeat: "no-repeat",
+                borderRadius: 1,
+                height: "250px",
+                width: "100%",
+                boxShadow: 2
+              }}
+            />
           </Grid>
 
           <Stack>
@@ -108,7 +109,7 @@ export default function About() {
               Atrakcje
             </Typography>
 
-            <Grid container spacing={3} sx={{ marginTop: 2 }}>
+            <Grid container spacing={2} sx={{ marginTop: 2 }}>
               <Grid item xs={12} md={8}>
                 <Typography
                   variant="body1"
@@ -136,19 +137,21 @@ export default function About() {
                   </a>
                 </Typography>
               </Grid>
-              <Grid item xs={12} md={4}>
-                <Box
-                  component="img"
-                  src={photo6}
-                  alt="Fornost - atrakcje i aktywności"
-                  sx={{
-                    width: "100%",
-                    height: "auto",
-                    borderRadius: 1,
-                    boxShadow: 2
-                  }}
-                />
-              </Grid>
+              <Grid
+                item
+                xs={12}
+                md={4}
+                sx={{
+                  backgroundImage: `url(${photo6})`,
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                  backgroundRepeat: "no-repeat",
+                  borderRadius: 1,
+                  height: "250px",
+                  width: "100%",
+                  boxShadow: 2
+                }}
+              />
             </Grid>
           </Stack>
 
@@ -189,7 +192,7 @@ export default function About() {
               Bezpieczeństwo
             </Typography>
 
-            <Grid container spacing={3} sx={{ marginTop: 2 }}>
+            <Grid container spacing={2} sx={{ marginTop: 2 }}>
               <Grid item xs={12} md={8}>
                 <Stack spacing={2}>
                   <Typography
@@ -232,19 +235,21 @@ export default function About() {
                   </Typography>
                 </Stack>
               </Grid>
-              <Grid item xs={12} md={4}>
-                <Box
-                  component="img"
-                  src={photo7}
-                  alt="Fornost - bezpieczeństwo i organizacja"
-                  sx={{
-                    width: "100%",
-                    height: "auto",
-                    borderRadius: 1,
-                    boxShadow: 2
-                  }}
-                />
-              </Grid>
+              <Grid
+                item
+                xs={12}
+                md={4}
+                sx={{
+                  backgroundImage: `url(${photo7})`,
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                  backgroundRepeat: "no-repeat",
+                  borderRadius: 1,
+                  height: "250px",
+                  width: "100%",
+                  boxShadow: 2
+                }}
+              />
             </Grid>
           </Stack>
 
@@ -257,7 +262,7 @@ export default function About() {
               Co zabrać
             </Typography>
 
-            <Grid container spacing={3} sx={{ marginTop: 2 }}>
+            <Grid container spacing={2} sx={{ marginTop: 2 }}>
               <Grid item xs={12} md={8}>
                 <Stack spacing={2}>
                   <Typography
@@ -344,19 +349,21 @@ export default function About() {
                   </Typography>
                 </Stack>
               </Grid>
-              <Grid item xs={12} md={4}>
-                <Box
-                  component="img"
-                  src={photo8}
-                  alt="Fornost - wyposażenie i przygotowanie"
-                  sx={{
-                    width: "100%",
-                    height: "auto",
-                    borderRadius: 1,
-                    boxShadow: 2
-                  }}
-                />
-              </Grid>
+              <Grid
+                item
+                xs={12}
+                md={4}
+                sx={{
+                  backgroundImage: `url(${photo8})`,
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                  backgroundRepeat: "no-repeat",
+                  borderRadius: 1,
+                  height: "250px",
+                  width: "100%",
+                  boxShadow: 2
+                }}
+              />
             </Grid>
           </Stack>
         </Stack>
