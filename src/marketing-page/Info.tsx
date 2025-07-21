@@ -52,7 +52,7 @@ export default function Info() {
             </Typography>
 
             <Stack
-              direction={{ xs: "column-reverse", md: "row" }}
+              direction={{ xs: "column", md: "row" }}
               spacing={3}
               alignItems="flex-start"
             >
@@ -124,7 +124,7 @@ export default function Info() {
             </Typography>
 
             <Stack
-              direction={{ xs: "column-reverse", md: "row" }}
+              direction={{ xs: "column", md: "row" }}
               spacing={3}
               alignItems="flex-start"
             >
@@ -272,7 +272,7 @@ export default function Info() {
             </Typography>
 
             <Stack
-              direction={{ xs: "column-reverse", md: "row" }}
+              direction={{ xs: "column", md: "row" }}
               spacing={3}
               alignItems="flex-start"
             >
@@ -355,7 +355,7 @@ export default function Info() {
             </Typography>
 
             <Stack
-              direction={{ xs: "column-reverse", md: "row" }}
+              direction={{ xs: "column", md: "row" }}
               spacing={3}
               alignItems="flex-start"
             >
