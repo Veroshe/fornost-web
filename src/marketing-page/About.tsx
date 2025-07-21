@@ -4,10 +4,10 @@ import Container from "@mui/material/Container";
 import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
 import Link from "@mui/material/Link";
-import photo1 from "../assets/photos/_TYR4937.jpg";
-import photo2 from "../assets/photos/_TYR5066.jpg";
-import photo3 from "../assets/photos/_TYR5192.jpg";
-import photo4 from "../assets/photos/_TYR5228.jpg";
+import photo1 from "../assets/photos/TYR4937.jpg";
+import photo2 from "../assets/photos/TYR5066.jpg";
+import photo3 from "../assets/photos/TYR5192.jpg";
+import photo4 from "../assets/photos/TYR5228.jpg";
 
 export default function About() {
   return (
